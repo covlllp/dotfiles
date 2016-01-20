@@ -1,0 +1,38 @@
+[alias]
+  st = status
+  co = checkout
+  cob = checkout -b
+  br = branch
+  brv = branch -vv
+  lola = log --decorate --oneline --graph --abbrev-commit --all
+  lol = log --decorate --oneline --graph --abbrev-commit
+  lolan = log --decorate --oneline --graph --abbrev-commit --all -n
+  loln = log --decorate --oneline --graph --abbrev-commit -n
+  com = commit -m
+  coamend = commit --amend
+  coma = commit --amend -m
+  adu = add -u
+  ada = add -A
+  aducom = !git add -u && git commit -m
+  aducoma = !git add -u && git commit --amend -m
+  adacom = !git add -A && git commit -m
+  adacoma = !git add -A && git commit --amend -m
+  adacoamend = !git add -A && git commit --amend
+  rem = remote
+  remv = remote -v
+  save = !git add -A && git commit -m "savepoint"
+  freb = !git fetch && git rebase origin/master
+  squash = rebase -i
+[user]
+	name = Colin VanLang
+	email = colinvanlang@gmail.com
+[color]
+	ui = auto
+[merge]
+	conflictstyle = diff3
+[push]
+	default = simple
+[format]
+  pretty = format:"%C(auto,yellow)commit %H%C(auto,reset)\nAuthor: %an <%ae>\nDate:   %cd\n\n%w(0,4,4)%B"
+[log]
+    date = local
