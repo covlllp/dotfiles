@@ -1,0 +1,20 @@
+# top-most EditorConfig file
+root = true
+
+[*]
+
+# Add new line at end of every file
+end_of_line = lf
+insert_final_newline = true
+
+# Remove trailing whitespace
+trim_trailing_whitespace = true
+
+# Default indentation to 2 spaces
+indent_style = space
+indent_size = 2
+
+
+# For Python, default to tab spaces of 4
+[*.py]
+indent_size = 4
