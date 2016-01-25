@@ -69,6 +69,8 @@
   { "keys": ["ctrl+shift+l"], "command": "move", "args": { "by": "characters", "forward": true, "extend": true } },
   { "keys": ["ctrl+alt+shift+j"], "command": "move", "args": { "by": "lines", "forward": true, "extend": true } },
   { "keys": ["ctrl+alt+shift+k"], "command": "move", "args": { "by": "lines", "forward": false, "extend": true } },
+  { "keys": ["ctrl+super+shift+h"], "command": "move_to", "args": {"to": "bol", "extend": true} },
+  { "keys": ["ctrl+super+shift+l"], "command": "move_to", "args": {"to": "eol", "extend": true} },
 
   // Move by word
   { "keys": ["ctrl+alt+h"], "command": "move", "args": {"by": "subwords", "forward": false} },
