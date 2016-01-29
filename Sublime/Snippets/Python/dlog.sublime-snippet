@@ -1,8 +1,8 @@
 <snippet>
-  <content><![CDATA[
-  dlog(${0})
-  ]]></content>
-  <tabTrigger>cl</tabTrigger>
-  <scope>source.python</scope>
-  <description>console.log(...)</description>
+<content><![CDATA[
+dlog(${0})
+]]></content>
+<tabTrigger>dl</tabTrigger>
+<scope>source.python</scope>
+<description>dlog(...)</description>
 </snippet>
