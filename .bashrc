@@ -22,7 +22,6 @@ PS1="\[$CYAN\]\t\[$RED\]-\[$GREEN\]\u\[$RED\]@\h\[$BLUE\]\[$BLUE\]\w\[\033[m\]\[
 bind '"\e\e[D": backward-word'
 bind '"\e\e[C": forward-word'
 alias ..="cd .."
-alias ls="ls --color=auto"
 alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
