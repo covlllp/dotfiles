@@ -10,7 +10,7 @@ GREEN="\[\033[0;32m\]"
 RED="\[\033[0;31m\]"
 
 export CLICOLOR=1
-export LS_OPTIONS='--color=auto'
+# export LS_OPTIONS='--color=auto'
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 export GREP_OPTIONS='--color=auto'
 export PATH=~/mongodb/bin:$PATH
@@ -30,11 +30,13 @@ PS1="\[$CYAN\]\t-\[$GREEN\]\u$HOSTNM\[$BLUE\]\[$BLUE\]\w\[\033[m\]\[$MAGENTA\]\$
 bind '"\e\e[D": backward-word'
 bind '"\e\e[C": forward-word'
 alias ..="cd .."
+alias ls="ls --color=auto"
 alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
 alias cl="clear"
 
 alias ser="cd ~/src/server"
+alias vmser="cd /srv/server"
 
 function vm-db() { vagrant ssh -c "db $@"; }
