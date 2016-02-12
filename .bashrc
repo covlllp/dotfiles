@@ -7,7 +7,7 @@ BLUE="\[\033[34m\]"
 LIGHT_GRAY="\[\033[0;37m\]"
 CYAN="\[\033[0;36m\]"
 GREEN="\[\033[0;32m\]"
-PINK="\[\033[01;31m\]"
+PINK="\[\033[1;31m\]"
 
 export CLICOLOR=1
 export LS_OPTIONS='--color=auto'
@@ -18,8 +18,10 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-MYHOST="colinvl-mbp"
-if [ $HOSTNAME = $MYHOST ]; then
+echo $HOSTNAME
+echo $MYHOST
+MYHOST="colinvl-mbp.corp.dropbox.com"
+if [ $HOSTNAME == $MYHOST ]; then
   HOSTNM=""
 else
   HOSTNM="\[$GREEN\]@\[$PINK\]\h"
