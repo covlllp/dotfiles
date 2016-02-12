@@ -37,6 +37,7 @@ alias lla="ls -la"
 alias cl="clear"
 
 alias ser="cd ~/src/server"
-alias vmser="cd /srv/server"
+alias servm="cd /srv/server"
+alias vmser="cd ~/src/vm-server"
 
 function vm-db() { vagrant ssh -c "db $@"; }
