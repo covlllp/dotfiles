@@ -19,9 +19,13 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 MYHOST="colinvl-mbp"
-HOSTNM="if [\h != ${MYHOST} ]; then echo -n @; hostname; fi;"
+if [ $HOSTNAME = $MYHOST ]; then
+  HOSTNM=""
+else
+  HOSTNM="\[$GREEN\]@\[$PINK\]\h"
+fi
 
-PS1="\[$CYAN\]\t-\[$GREEN\]\u\[$PINK\]`$HOSTNM`\[$BLUE\]\[$BLUE\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$YELLOW\]\$\[$WHITE\] "
+PS1="\[$CYAN\]\t-\[$GREEN\]\u$HOSTNM\[$BLUE\]\[$BLUE\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$YELLOW\]\$\[$WHITE\] "
 
 bind '"\e\e[D": backward-word'
 bind '"\e\e[C": forward-word'
