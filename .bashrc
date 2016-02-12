@@ -17,16 +17,12 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-  debian_chroot=$(cat /etc/debian_chroot)
-fi
-
 PS1="\[$CYAN\]\t\[$RED\]-\[$GREEN\]\u\[$RED\]@\h\[$BLUE\]\[$BLUE\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$YELLOW\]\$\[$WHITE\] "
 
 bind '"\e\e[D": backward-word'
 bind '"\e\e[C": forward-word'
 alias ..="cd .."
+alias ls="ls --color=auto"
 alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
@@ -34,4 +30,4 @@ alias cl="clear"
 
 alias ser="cd ~/src/server"
 
-function db() { vagrant ssh -c "db $@"; }
+function vm-db() { vagrant ssh -c "db $@"; }
