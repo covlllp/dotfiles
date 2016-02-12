@@ -7,6 +7,7 @@ BLUE="\[\033[34m\]"
 LIGHT_GRAY="\[\033[0;37m\]"
 CYAN="\[\033[0;36m\]"
 GREEN="\[\033[0;32m\]"
+PINK="\[\033[01;31m\]"
 
 export CLICOLOR=1
 export LS_OPTIONS='--color=auto'
@@ -17,7 +18,10 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-PS1="\[$CYAN\]\t\[$RED\]-\[$GREEN\]\u\[$RED\]@\h\[$BLUE\]\[$BLUE\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$YELLOW\]\$\[$WHITE\] "
+MYHOST="colinvl-mbp"
+HOSTNM="if [\h != ${MYHOST} ]; then echo -n @; hostname; fi;"
+
+PS1="\[$CYAN\]\t-\[$GREEN\]\u\[$PINK\]`$HOSTNM`\[$BLUE\]\[$BLUE\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$YELLOW\]\$\[$WHITE\] "
 
 bind '"\e\e[D": backward-word'
 bind '"\e\e[C": forward-word'
