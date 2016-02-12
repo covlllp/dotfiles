@@ -17,7 +17,12 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-PS1="\[$CYAN\]\t\[$RED\]-\[$GREEN\]\u\[$BLUE\]\[$BLUE\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$YELLOW\]\$\[$WHITE\] "
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
+  debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+PS1="\[$CYAN\]\t\[$RED\]-\[$GREEN\]\u\[$RED\]@\h\[$BLUE\]\[$BLUE\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$YELLOW\]\$\[$WHITE\] "
 
 bind '"\e\e[D": backward-word'
 bind '"\e\e[C": forward-word'
