@@ -40,11 +40,11 @@
   { "keys": ["ctrl+super+backspace"], "command": "delete_word", "args": { "forward": true, "sub_words": true } },
 
   // Navigation controls
-  { "keys": ["super+up"], "command": "move_caret_back", "args": { "nlines": 10 } },
-  { "keys": ["super+down"], "command": "move_caret_forward", "args": { "nlines": 10 } },
-  { "keys": ["super+alt+up"], "command": "move", "args": { "by": "pages", "forward": false } },
-  { "keys": ["super+alt+down"], "command": "move", "args": { "by": "pages", "forward": true } },
-  { "keys": ["super+k", "super+enter"], "command": "show_at_center" },
+  // { "keys": ["super+up"], "command": "move_caret_back", "args": { "nlines": 10 } },
+  // { "keys": ["super+down"], "command": "move_caret_forward", "args": { "nlines": 10 } },
+  // { "keys": ["super+alt+up"], "command": "move", "args": { "by": "pages", "forward": false } },
+  // { "keys": ["super+alt+down"], "command": "move", "args": { "by": "pages", "forward": true } },
+  // { "keys": ["super+k", "super+enter"], "command": "show_at_center" },
 
   // Scroll syncing
   { "keys": ["super+ctrl+s"], "args": {"setting": "syncScroll"}, "command": "toggle_sync_scroll" },
