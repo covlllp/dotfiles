@@ -1,6 +1,22 @@
 #!/usr/bin/env bash
 
+# Collect os
+os=$1
+if [ "$os" != "linux" ]
+  then
+    os="mac"
+fi
+
+if ["$os" == 'mac']
+then
+  sublime_path="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
+else
+  sublime_path="$HOME/test"
+fi
+
 ## Remove old files (if they're there)
+# rm "$sublime_path/alt_page_updown.py"
+# rm "$sublime_path/Default (OSX).sublime-keymap"
 rm ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/alt_page_updown.py
 rm ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Default\ \(OSX\).sublime-keymap
 rm ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings

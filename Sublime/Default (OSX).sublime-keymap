@@ -58,8 +58,8 @@
   // --- VIM STYLE MOVEMENT --//
   // Simple cursor movement
   // { "keys": ["ctrl+h"], "command": "move", "args": { "by": "characters", "forward": false } },
-  // { "keys": ["ctrl+j"], "command": "move", "args": { "by": "lines", "forward": true } },
-  // { "keys": ["ctrl+k"], "command": "move", "args": { "by": "lines", "forward": false } },
+  { "keys": ["ctrl+j"], "command": "move", "args": { "by": "lines", "forward": true } },
+  { "keys": ["ctrl+k"], "command": "move", "args": { "by": "lines", "forward": false } },
   // { "keys": ["ctrl+l"], "command": "move", "args": { "by": "characters", "forward": true } },
 
   // Cursor movement with highlighting
