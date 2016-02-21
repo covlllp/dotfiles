@@ -8,7 +8,8 @@
 	"hot_exit": false,
 	"ignored_packages":
 	[
-		"Markdown"
+		"Markdown",
+		"Sync View Scroll"
 	],
 	"indent_guide_options":
 	[

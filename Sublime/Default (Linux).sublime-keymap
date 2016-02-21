@@ -1,0 +1,93 @@
+[
+  // --- Make Linus similar to Mac --//
+  { "keys": ["alt+p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+  { "keys": ["alt+shift+p"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
+
+
+
+
+  // Remap destroying pane to super+k x2
+  { "keys": ["ctrl+k", "ctrl+k"], "command": "destroy_pane", "args": {"direction": "self"} },
+
+  // Remap moving between panes
+  { "keys": ["alt+1"], "command": "focus_group", "args": { "group": 0 } },
+  { "keys": ["alt+2"], "command": "focus_group", "args": { "group": 1 } },
+  { "keys": ["alt+3"], "command": "focus_group", "args": { "group": 2 } },
+  { "keys": ["alt+4"], "command": "focus_group", "args": { "group": 3 } },
+  { "keys": ["alt+5"], "command": "focus_group", "args": { "group": 4 } },
+  { "keys": ["alt+6"], "command": "focus_group", "args": { "group": 5 } },
+  { "keys": ["alt+7"], "command": "focus_group", "args": { "group": 6 } },
+  { "keys": ["alt+8"], "command": "focus_group", "args": { "group": 7 } },
+  { "keys": ["alt+9"], "command": "focus_group", "args": { "group": 8 } },
+  { "keys": ["ctrl+1"], "command": "select_by_index", "args": { "index": 0 } },
+  { "keys": ["ctrl+2"], "command": "select_by_index", "args": { "index": 1 } },
+  { "keys": ["ctrl+3"], "command": "select_by_index", "args": { "index": 2 } },
+  { "keys": ["ctrl+4"], "command": "select_by_index", "args": { "index": 3 } },
+  { "keys": ["ctrl+5"], "command": "select_by_index", "args": { "index": 4 } },
+  { "keys": ["ctrl+6"], "command": "select_by_index", "args": { "index": 5 } },
+  { "keys": ["ctrl+7"], "command": "select_by_index", "args": { "index": 6 } },
+  { "keys": ["ctrl+8"], "command": "select_by_index", "args": { "index": 7 } },
+  { "keys": ["ctrl+9"], "command": "select_by_index", "args": { "index": 8 } },
+  { "keys": ["ctrl+0"], "command": "select_by_index", "args": { "index": 9 } },
+
+  // Remap jumping to line
+  { "keys": ["super+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+
+  // Remap for delete and delete by word
+  { "keys": ["alt+backspace"], "command": "right_delete" },
+  { "keys": ["ctrl+alt+backspace"], "command": "delete_word", "args": { "forward": true, "sub_words": true } },
+
+  // Scroll syncing
+  { "keys": ["ctrl+alt+s"], "args": {"setting": "syncScroll"}, "command": "toggle_sync_scroll" },
+
+  // Remap to delete whole line
+  { "keys": ["alt+shift+k"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+
+
+
+
+  // --- VIM STYLE MOVEMENT --//
+  // Simple cursor movement
+  { "keys": ["ctrl+j"], "command": "move", "args": { "by": "lines", "forward": true } },
+  { "keys": ["ctrl+k"], "command": "move", "args": { "by": "lines", "forward": false } },
+
+  // View navigation
+  { "keys": ["ctrl+alt+h"], "command": "prev_view" },
+  { "keys": ["ctrl+alt+l"], "command": "next_view" },
+
+
+  // --- VINTAGE COMMANDS ---//
+  // Exit insert mode
+  { "keys": ["j", "j"], "command": "exit_insert_mode",
+    "context":
+    [
+      { "key": "setting.command_mode", "operand": false },
+      { "key": "setting.is_widget", "operand": false }
+    ]
+  },
+
+
+
+  // Move by word
+  { "keys": ["ctrl+h"], "command": "move", "args": {"by": "subwords", "forward": false},
+     "context": [{"key": "setting.command_mode"}]
+  },
+  { "keys": ["ctrl+l"], "command": "move", "args": {"by": "subword_ends", "forward": true},
+     "context": [{"key": "setting.command_mode"}]
+  },
+
+  // Navigation
+  { "keys": ["J"], "command": "move_caret_forward", "args": { "nlines": 10 },
+     "context": [{"key": "setting.command_mode"}]
+  },
+  { "keys": ["K"], "command": "move_caret_back", "args": { "nlines": 10 },
+     "context": [{"key": "setting.command_mode"}]
+  },
+  { "keys": ["L"], "command": "move_to", "args": { "to": "eol", "extend": false },
+     "context": [{"key": "setting.command_mode"}]
+  },
+  { "keys": ["H"], "command": "move_to", "args": { "to": "bol", "extend": false },
+     "context": [{"key": "setting.command_mode"}]
+  }
+
+]
