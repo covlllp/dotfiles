@@ -18,14 +18,17 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-MYHOST="colinvl-mbp.corp.dropbox.com"
-if [ $HOSTNAME == $MYHOST ]; then
+WORK_COMP="colinvl-mbp.corp.dropbox.com"
+HOME_COMP="localhost"
+if [ $HOSTNAME == $WORK_COMP ] || [ $HOSTNAME == $HOME_COMP ]; then
   HOSTNM=""
 else
-  HOSTNM="\[$GREEN\]@\[$RED\]\h"
+  HOSTNM="${GREEN}@${RED}\h"
 fi
 
-PS1="\[$CYAN\]\t-\[$GREEN\]\u$HOSTNM\[$BLUE\]\[$BLUE\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$YELLOW\]\$\[$WHITE\] "
+# PS1="\[$CYAN\]\t-\[$GREEN\]\u$HOSTNM\[$BLUE\]\[$BLUE\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$YELLOW\]\$\[$WHITE\] "
+
+PS1="${CYAN}\t-${GREEN}\u${HOSTNM}${BLUE}\w\[\033[m\]${MAGENTA}\$(__git_ps1)${YELLOW}\$${WHITE} "
 
 bind '"\e\e[D": backward-word'
 bind '"\e\e[C": forward-word'
