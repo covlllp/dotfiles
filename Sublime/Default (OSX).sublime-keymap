@@ -44,7 +44,7 @@
   // { "keys": ["super+down"], "command": "move_caret_forward", "args": { "nlines": 10 } },
   // { "keys": ["super+alt+up"], "command": "move", "args": { "by": "pages", "forward": false } },
   // { "keys": ["super+alt+down"], "command": "move", "args": { "by": "pages", "forward": true } },
-  // { "keys": ["super+k", "super+enter"], "command": "show_at_center" },
+  { "keys": ["super+k", "super+enter"], "command": "show_at_center" },
 
   // Scroll syncing
   { "keys": ["super+ctrl+s"], "args": {"setting": "syncScroll"}, "command": "toggle_sync_scroll" },
@@ -61,6 +61,15 @@
   { "keys": ["ctrl+j"], "command": "move", "args": { "by": "lines", "forward": true } },
   { "keys": ["ctrl+k"], "command": "move", "args": { "by": "lines", "forward": false } },
   // { "keys": ["ctrl+l"], "command": "move", "args": { "by": "characters", "forward": true } },
+
+
+  // Swapping lines
+  { "keys": ["ctrl+super+k"], "command": "swap_line_up",
+     "context": [{"key": "setting.command_mode"}]
+  },
+  { "keys": ["ctrl+super+j"], "command": "swap_line_down",
+     "context": [{"key": "setting.command_mode"}]
+  },
 
   // Cursor movement with highlighting
   // { "keys": ["ctrl+shift+h"], "command": "move", "args": { "by": "characters", "forward": false, "extend": true } },
@@ -114,6 +123,12 @@
      "context": [{"key": "setting.command_mode"}]
   },
   { "keys": ["K"], "command": "move_caret_back", "args": { "nlines": 10 },
+     "context": [{"key": "setting.command_mode"}]
+  },
+  { "keys": ["ctrl+shift+j"], "command": "move_caret_forward", "args": { "nlines": 30 },
+     "context": [{"key": "setting.command_mode"}]
+  },
+  { "keys": ["ctrl+shift+k"], "command": "move_caret_back", "args": { "nlines": 30 },
      "context": [{"key": "setting.command_mode"}]
   },
   { "keys": ["L"], "command": "move_to", "args": { "to": "eol", "extend": false },

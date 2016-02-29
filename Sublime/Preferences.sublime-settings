@@ -1,7 +1,7 @@
 {
 	"always_show_minimap_viewport": true,
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/User/SublimeLinter/Material Spacegray Eighties (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Material Spaceblack Oceanic (SL).tmTheme",
 	"enable_tab_scrolling": false,
 	"find_selected_text": true,
 	"font_size": 10,
@@ -31,7 +31,8 @@
 	],
 	"scroll_past_end": true,
 	"tab_size": 2,
-	"theme": "Material Spacegray Eighties.sublime-theme",
+  // "theme": "Material Spacegray Eighties.sublime-theme",
+	"theme": "Material Spaceblack.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"vintage_start_in_command_mode": true,
 	"word-wrap": true
