@@ -43,7 +43,8 @@
   // Remap to delete whole line
   { "keys": ["alt+shift+k"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
 
-
+  // Centering window
+  { "keys": ["ctrl+k", "ctrl+enter"], "command": "show_at_center" },
 
 
   // --- VIM STYLE MOVEMENT --//

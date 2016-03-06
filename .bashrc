@@ -28,6 +28,12 @@ fi
 
 PS1="${CYAN}\t-${GREEN}\u${HOSTNM}${BLUE}\w\[\033[m\]${MAGENTA}\$(__git_ps1)${YELLOW}\$${WHITE} "
 
+# Extra linux things
+if [ $HOSTNAME == $HOME_COMP ]; then
+  PATH=${PATH}:/home/cvanlang/tou-usb/android/android-studio/bin
+fi
+
+
 bind '"\e\e[D": backward-word'
 bind '"\e\e[C": forward-word'
 alias ..="cd .."
