@@ -1,5 +1,9 @@
 source ~/dotfiles/.git-prompt.sh
 
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
 WHITE="\[\033[0m\]"
 MAGENTA="\[\033[0;35m\]"
 YELLOW="\[\033[0;33m\]"
