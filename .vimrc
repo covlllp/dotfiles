@@ -7,5 +7,15 @@ set mouse=a
 " Show line numbers
 set number
 
-" Remap esc to jj
+" --- Remappings --- "
+
+" esc to jj
 imap jj <Esc>
+
+" navigation
+nmap J 5j
+nmap K 5k
+nmap H 0
+nmap L $
+nmap <C>h b
+nmap <C>l w
