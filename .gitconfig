@@ -18,6 +18,7 @@
   adacom = !git add -A && git commit -m
   adacoma = !git add -A && git commit --amend -m
   adacoamend = !git add -A && git commit --amend
+  aducoamend = !git add -u && git commit --amend
   rem = remote
   remv = remote -v
   save = !git add -A && git commit -m "savepoint"
