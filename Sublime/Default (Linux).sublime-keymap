@@ -2,8 +2,11 @@
   // --- Make Linus similar to Mac --//
   { "keys": ["alt+p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
   { "keys": ["alt+shift+p"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
-
-
+  { "keys": ["alt+d"], "command": "find_under_expand" },
+  { "keys": ["alt+w"], "command": "close" },
+  { "keys": ["alt+shift+d"], "command": "duplicate_line" },
+  { "keys": ["alt+shift+up"], "command": "swap_line_up" },
+  { "keys": ["alt+shift+down"], "command": "swap_line_down" },
 
 
   // Remap destroying pane to super+k x2
@@ -31,7 +34,7 @@
   { "keys": ["ctrl+0"], "command": "select_by_index", "args": { "index": 9 } },
 
   // Remap jumping to line
-  { "keys": ["super+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+  { "keys": ["alt+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
 
   // Remap for delete and delete by word
   { "keys": ["alt+backspace"], "command": "right_delete" },
@@ -44,13 +47,13 @@
   { "keys": ["alt+shift+k"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
 
   // Centering window
-  { "keys": ["ctrl+k", "ctrl+enter"], "command": "show_at_center" },
+  { "keys": ["alt+k", "alt+enter"], "command": "show_at_center" },
 
 
   // --- VIM STYLE MOVEMENT --//
   // Simple cursor movement
-  // { "keys": ["ctrl+j"], "command": "move", "args": { "by": "lines", "forward": true } },
-  // { "keys": ["ctrl+k"], "command": "move", "args": { "by": "lines", "forward": false } },
+  { "keys": ["ctrl+j"], "command": "move", "args": { "by": "lines", "forward": true } },
+  { "keys": ["ctrl+k"], "command": "move", "args": { "by": "lines", "forward": false } },
 
   // View navigation
   { "keys": ["ctrl+alt+h"], "command": "prev_view" },
