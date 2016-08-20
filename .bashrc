@@ -32,12 +32,6 @@ fi
 
 PS1="${GREEN}\u${HOSTNM} ${BLUE}\w\[\033[m\]${MAGENTA}\$(__git_ps1)\n${YELLOW}\$${WHITE} "
 
-# Extra linux things
-if [ $HOSTNAME == $HOME_COMP ]; then
-  PATH=${PATH}:/home/cvanlang/tou-usb/android/android-studio/bin
-fi
-
-
 bind '"\e\e[D": backward-word'
 bind '"\e\e[C": forward-word'
 alias ..="cd .."
@@ -47,8 +41,12 @@ alias la="ls -a"
 alias lla="ls -la"
 alias cl="clear"
 
-alias ser="cd ~/src/server"
-alias servm="cd /srv/server"
-alias vmser="cd ~/src/vm-server"
+# Extra linux things
+if [ $HOSTNAME == $HOME_COMP ]; then
+  PATH=${PATH}:/home/cvanlang/tou-usb/android/android-studio/bin
+fi
 
-function vm-db() { vagrant ssh -c "db $@"; }
+# Extra work things
+if [ $HOSTNAME == $WORK_COMP ]; then
+  alias ser="cd ~/src/server"
+fi
