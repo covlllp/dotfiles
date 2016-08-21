@@ -1,0 +1,29 @@
+export CLICOLOR=1
+export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+export GREP_OPTIONS='--color=auto'
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+alias ls="ls --color=auto"
+
+# Extra linux things
+if [ "$HOST" = "localhost" ] ; then
+  PATH=${PATH}:/home/cvanlang/tou-usb/android/android-studio/bin
+fi
+
+# Extra work things
+if [ "$HOST" = "colinvl-mbp.corp.dropbox.com" ] ; then
+  alias ser="cd ~/src/server"
+  alias ls="ls -G"
+fi
+
+# Other common ls commands
+alias ll="ls -l"
+alias la="ls -a"
+alias lla="ls -la"
+
+alias ..="cd .."
+alias cl="clear"
+
+# Find commands
+alias f="find . | grep"
