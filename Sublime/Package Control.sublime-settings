@@ -20,11 +20,16 @@
 		"Pyxl syntax",
 		"SCSS",
 		"SFTP",
+		"sublime-better-typescript",
 		"SublimeLinter",
 		"SublimeLinter-coffee",
 		"SublimeLinter-coffeelint",
 		"Sync View Scroll",
 		"Theme - Spacegray",
 		"Tomorrow Color Schemes"
+	],
+	"repositories":
+	[
+		"https://github.com/lavrton/sublime-better-typescript.git"
 	]
 }
