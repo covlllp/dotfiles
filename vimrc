@@ -1,5 +1,44 @@
 set nocompatible
 
+" --- VUNDLE SETUP --- "
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Text editing helpers
+Plugin 'ntpeters/vim-better-whitespace' " Better Whitespace removal/highlighting
+Plugin 'tpope/vim-surround'             " Add, edit, remove tags like ', \", (, {
+Plugin 'vim-scripts/tComment'           " Shortcut to toggle comments
+Plugin 'jiangmiao/auto-pairs'           " Auto pairing of tags
+
+" Code linting
+Plugin 'scrooloose/syntastic'
+
+" File navigation
+Plugin 'ctrlpvim/ctrlp.vim'             " Fuzzy search for files
+Plugin 'scrooloose/nerdtree'            " Sidebar for file directory
+
+" Syntax highlighting
+Plugin 'othree/yajs.vim'                " ES6
+
+" Git helpers
+Plugin 'airblade/vim-gitgutter'         " Gitgutter
+
+" Vim UI improvements
+Plugin 'junegunn/goyo.vim'              " Distraction-free writing
+Plugin 'chriskempson/base16-vim'        " Base16 syntax highlighting color scheme
+Plugin 'vim-airline/vim-airline'        " Nice status/tabline
+Plugin 'vim-airline/vim-airline-themes' " status/tabline themes
+
+call vundle#end()
+filetype plugin indent on
+
+
+" --- Set VIM config --- "
+
 " Syntax highlighting on
 syntax on
 
@@ -14,6 +53,10 @@ set cursorline
 
 " Set terminal title
 set title
+
+" Set ruler
+set colorcolumn=100
+highlight ColorColumn ctermbg=7
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -47,6 +90,12 @@ set mat=2      " How many tenths of a second to blink when matching
 " Line wrapping, but dont' insert newlines
 set wrap
 set textwidth=0 wrapmargin=0
+
+" Set shell to zsh
+set shell=zsh
+
+" Set colorscheme to base16
+" colorscheme base16-solarized-dark
 
 
 " --- Remappings --- "
