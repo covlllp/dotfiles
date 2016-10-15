@@ -52,6 +52,9 @@
   // Remap to delete whole line
   { "keys": ["super+shift+k"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
 
+  // Focus to sidebar
+  { "keys": ["super+k", "super+u"], "command": "focus_side_bar" },
+
 
 
 
