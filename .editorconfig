@@ -15,11 +15,6 @@ indent_style = space
 indent_size = 2
 
 
-# For Python, default to tab spaces of 4
-[*.py]
-indent_size = 4
-
-
-# For HTML, default to tab spaces of 4
-[*.html]
+# For Python or HTML, default to tab spaces of 4
+[*.(py|html)]
 indent_size = 4
