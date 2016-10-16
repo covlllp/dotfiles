@@ -39,6 +39,9 @@ filetype plugin indent on
 
 " --- Set VIM config --- "
 
+" Switch leader to , (\ is default)
+let mapleader = ","
+
 " Syntax highlighting on
 syntax on
 
@@ -53,6 +56,9 @@ set cursorline
 
 " Set terminal title
 set title
+
+" Allow multiple buffers
+set hidden
 
 " Set ruler
 set colorcolumn=100
@@ -91,12 +97,27 @@ set mat=2      " How many tenths of a second to blink when matching
 set wrap
 set textwidth=0 wrapmargin=0
 
+" Pane splitting
+set splitbelow
+set splitright
+
 " Set shell to zsh
 set shell=zsh
 
 " Set colorscheme to base16
 " colorscheme base16-solarized-dark
 
+
+" --- Plugin Settings --- "
+
+" Airline
+set laststatus=2
+
+" Nerdtree
+map <C-k><C-u> :NERDTreeToggle<CR>
+
+" Fix whitespace
+nnoremap <leader>w :FixWhitespace<CR>
 
 " --- Remappings --- "
 
@@ -106,10 +127,22 @@ nnoremap ; :
 " esc to jj
 imap jj <Esc>
 
+" Pane creation
+nnoremap <C-k><C-l> :vnew<CR>
+nnoremap <C-k><C-k> :new<CR>
+
+" Pane navigation
+nnoremap <leader>l <C-W><C-L>
+nnoremap <leader>k <C-W><C-K>
+nnoremap <leader>j <C-W><C-J>
+nnoremap <leader>h <C-W><C-h>
+
 " navigation
 nmap J 5j
 nmap K 5k
-nmap H 0
-nmap L $
-nmap <C>h b
-nmap <C>l w
+nmap H b
+nmap L w
+
+" clear search highlight
+nnoremap <leader>/ :noh<CR>
+
