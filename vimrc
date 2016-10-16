@@ -112,8 +112,13 @@ set shell=zsh
 
 " Airline
 set laststatus=2
+let g:airline_powerline_fonts = 1
 
 " Nerdtree
+let g:ctrlp_custom_ignore = {
+\ 'dir': 'node_modules',
+\ }
+
 map <C-k><C-u> :NERDTreeToggle<CR>
 
 " Fix whitespace
