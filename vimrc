@@ -23,6 +23,7 @@ Plugin 'scrooloose/nerdtree'            " Sidebar for file directory
 
 " Syntax highlighting
 Plugin 'othree/yajs.vim'                " ES6
+Plugin 'kchmck/vim-coffee-script'       " Coffee
 
 " Git helpers
 Plugin 'airblade/vim-gitgutter'         " Gitgutter
@@ -129,7 +130,7 @@ imap jj <Esc>
 
 " Pane creation
 nnoremap <C-k><C-l> :vnew<CR>
-nnoremap <C-k><C-k> :new<CR>
+nnoremap <C-k><C-j> :new<CR>
 
 " Pane navigation
 nnoremap <leader>l <C-W><C-L>
@@ -142,6 +143,8 @@ nmap J 5j
 nmap K 5k
 nmap H b
 nmap L w
+
+map <C-k><C-k> zz
 
 " clear search highlight
 nnoremap <leader>/ :noh<CR>
