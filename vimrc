@@ -24,9 +24,11 @@ Plugin 'scrooloose/nerdtree'            " Sidebar for file directory
 " Syntax highlighting
 Plugin 'othree/yajs.vim'                " ES6
 Plugin 'kchmck/vim-coffee-script'       " Coffee
+Plugin 'HerringtonDarkholme/yats.vim'   " Typescript
 
 " Git helpers
 Plugin 'airblade/vim-gitgutter'         " Gitgutter
+Plugin 'tpope/vim-fugitive'             " Helpful git stuff
 
 " Vim UI improvements
 Plugin 'junegunn/goyo.vim'              " Distraction-free writing
@@ -70,7 +72,7 @@ set title
 set hidden
 
 " Set ruler
-set colorcolumn=100
+set colorcolumn=100,120
 highlight ColorColumn ctermbg=7
 
 " Set to auto read when a file is changed from the outside
@@ -121,16 +123,17 @@ set shell=zsh
 
 " Airline
 set laststatus=2
-let g:airline_powerline_fonts = 1
+set noshowmode
+" let g:airline_powerline_fonts = 1
 
 " CtrlP
 map <leader>c :CtrlPClearCache<CR>
-
-" Nerdtree
+let g:ctrlp_max_files=0
 let g:ctrlp_custom_ignore = {
-\ 'dir': 'node_modules',
+\ 'dir': 'node_modules\|\.git$',
 \ }
 
+" Nerdtree
 map <C-k><C-u> :NERDTreeToggle<CR>
 
 " Fix whitespace
