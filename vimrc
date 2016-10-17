@@ -43,6 +43,14 @@ filetype plugin indent on
 " Switch leader to , (\ is default)
 let mapleader = ","
 
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" Turn backup off, since most stuff is in git anyways
+set nobackup
+set nowb
+set noswapfile
+
 " Syntax highlighting on
 syntax on
 
@@ -115,6 +123,9 @@ set shell=zsh
 set laststatus=2
 let g:airline_powerline_fonts = 1
 
+" CtrlP
+map <leader>c :CtrlPClearCache<CR>
+
 " Nerdtree
 let g:ctrlp_custom_ignore = {
 \ 'dir': 'node_modules',
@@ -123,7 +134,7 @@ let g:ctrlp_custom_ignore = {
 map <C-k><C-u> :NERDTreeToggle<CR>
 
 " Fix whitespace
-nnoremap <leader>w :FixWhitespace<CR>
+nnoremap <leader>w :StripWhitespace<CR>
 
 " --- Remappings --- "
 
