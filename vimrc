@@ -32,7 +32,7 @@ Plugin 'tpope/vim-fugitive'             " Helpful git stuff
 
 " Vim UI improvements
 Plugin 'junegunn/goyo.vim'              " Distraction-free writing
-Plugin 'chriskempson/base16-vim'        " Base16 syntax highlighting color scheme
+Plugin 'mhartington/oceanic-next'       " Oceanic-next
 Plugin 'vim-airline/vim-airline'        " Nice status/tabline
 Plugin 'vim-airline/vim-airline-themes' " status/tabline themes
 
@@ -52,9 +52,6 @@ set encoding=utf8
 set nobackup
 set nowb
 set noswapfile
-
-" Syntax highlighting on
-syntax on
 
 " Enable mouse
 set mouse=a
@@ -115,8 +112,13 @@ set splitright
 " Set shell to zsh
 set shell=zsh
 
-" Set colorscheme to base16
-" colorscheme base16-solarized-dark
+" Syntax highlighting on
+syntax on
+
+" Set colorscheme to oceanic
+set t_Co=256
+set background=dark
+colorscheme OceanicNext
 
 
 " --- Plugin Settings --- "
@@ -124,6 +126,7 @@ set shell=zsh
 " Airline
 set laststatus=2
 set noshowmode
+let g:airline_theme='oceanicnext'
 " let g:airline_powerline_fonts = 1
 
 " CtrlP
@@ -167,4 +170,7 @@ map <C-k><C-k> zz
 
 " clear search highlight
 nnoremap <leader>/ :noh<CR>
+
+" open new file
+map <C-o> :edit
 
