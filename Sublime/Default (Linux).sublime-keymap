@@ -49,6 +49,11 @@
   // Centering window
   { "keys": ["alt+k", "alt+enter"], "command": "show_at_center" },
 
+  // Sidebar focus
+  { "keys": ["alt+k", "alt+u"], "command": "focus_side_bar" },
+
+  // Hide side-bar
+  { "keys": ["alt+k", "alt+b"], "command": "toggle_side_bar" },
 
   // --- VIM STYLE MOVEMENT --//
   // Simple cursor movement

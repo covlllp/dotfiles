@@ -28,3 +28,8 @@ alias cl="clear"
 # Find commands
 alias f="find . | grep"
 alias t="tail -f"
+alias gr="grep -R"
+
+# Exit commands
+alias q="exit"
+alias :q="exit"
