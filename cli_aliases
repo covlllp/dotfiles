@@ -27,3 +27,4 @@ alias cl="clear"
 
 # Find commands
 alias f="find . | grep"
+alias t="tail -f"
