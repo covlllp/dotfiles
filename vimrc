@@ -46,7 +46,7 @@ filetype plugin indent on
 let mapleader = ","
 
 " Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
+set encoding=utf-8
 
 " Turn backup off, since most stuff is in git anyways
 set nobackup
@@ -127,7 +127,7 @@ colorscheme OceanicNext
 set laststatus=2
 set noshowmode
 let g:airline_theme='oceanicnext'
-" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 
 " CtrlP
 map <leader>c :CtrlPClearCache<CR>
