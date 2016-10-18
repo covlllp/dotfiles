@@ -172,5 +172,5 @@ map <C-k><C-k> zz
 nnoremap <leader>/ :noh<CR>
 
 " open new file
-map <C-o> :edit
+map <C-o> :edit 
 
