@@ -90,8 +90,9 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
-" Set tabs to 4 for python
-autocmd FileType py setlocal shiftwidth=4 tabstop=4
+" Set tabs to 4 for python and html
+autocmd FileType python setlocal shiftwidth=4 tabstop=4
+autocmd FileType html setlocal shiftwidth=4 tabstop=4
 
 " Configure backspace so it acts as it should
 set backspace=eol,start,indent
