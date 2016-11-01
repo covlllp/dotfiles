@@ -20,6 +20,7 @@ Plugin 'scrooloose/syntastic'
 " File navigation
 Plugin 'ctrlpvim/ctrlp.vim'             " Fuzzy search for files
 Plugin 'scrooloose/nerdtree'            " Sidebar for file directory
+Plugin 'qpkorr/vim-bufkill'             " Buffer management
 
 " Syntax highlighting
 Plugin 'othree/yajs.vim'                " ES6
@@ -94,9 +95,15 @@ set expandtab
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd FileType html setlocal shiftwidth=4 tabstop=4
 
+" Set .md as markdown
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+
 " Configure backspace so it acts as it should
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
+
+" Use clipboard for copy and paste
+set clipboard=unnamed
 
 " Show matching brackets when text indicator is over them
 set showmatch
@@ -124,17 +131,26 @@ colorscheme OceanicNext
 
 " --- Plugin Settings --- "
 
+" Syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " Airline
 set laststatus=2
 set noshowmode
 let g:airline_theme='oceanicnext'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " CtrlP
+map <C-t> :CtrlPBuffer<CR>
+map <C-e> :CtrlPMRU<CR>
 map <leader>c :CtrlPClearCache<CR>
 let g:ctrlp_max_files=0
 let g:ctrlp_custom_ignore = {
-\ 'dir': 'node_modules\|\.git$',
+\ 'dir': 'node_modules\|\.git$\|selenium-tests/results\|images',
 \ }
 
 " Nerdtree
@@ -142,6 +158,13 @@ map <C-k><C-u> :NERDTreeToggle<CR>
 
 " Fix whitespace
 nnoremap <leader>w :StripWhitespace<CR>
+
+" Goyo
+let g:goyo_width=100
+
+" BufKill
+" Close buffer
+map <C-w> :BD<CR>
 
 " --- Remappings --- "
 
@@ -154,6 +177,9 @@ imap jj <Esc>
 " Pane creation
 nnoremap <C-k><C-l> :vnew<CR>
 nnoremap <C-k><C-j> :new<CR>
+
+" // to search for selected text
+vnoremap // y/<C-R>"<CR>
 
 " Pane navigation
 nnoremap <leader>l <C-W><C-L>
