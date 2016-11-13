@@ -26,6 +26,7 @@ Plugin 'qpkorr/vim-bufkill'             " Buffer management
 Plugin 'othree/yajs.vim'                " ES6
 Plugin 'kchmck/vim-coffee-script'       " Coffee
 Plugin 'HerringtonDarkholme/yats.vim'   " Typescript
+Plugin 'mxw/vim-jsx'                    " JSX
 
 " Git helpers
 Plugin 'airblade/vim-gitgutter'         " Gitgutter
@@ -143,6 +144,9 @@ set noshowmode
 let g:airline_theme='oceanicnext'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+
+" JSX syntax
+let g:jsx_ext_required = 0
 
 " CtrlP
 map <C-t> :CtrlPBuffer<CR>
