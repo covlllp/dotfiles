@@ -103,7 +103,7 @@ set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
 " Use clipboard for copy and paste
-set clipboard=unnamed
+" set clipboard=unnamed
 
 " Show matching brackets when text indicator is over them
 set showmatch
