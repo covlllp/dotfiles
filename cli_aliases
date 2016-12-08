@@ -17,6 +17,11 @@ if [ "$HOST" = "colinvl-mbp.corp.dropbox.com" ] ; then
   alias ls="ls -G"
 fi
 
+if [ "$HOST" = "dbdev" ] ; then
+  alias ser="cd /srv/server"
+  alias ls="ls -G"
+fi
+
 # Other common ls commands
 alias ll="ls -l"
 alias la="ls -a"
