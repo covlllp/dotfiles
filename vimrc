@@ -27,6 +27,7 @@ Plugin 'othree/yajs.vim'                " ES6
 Plugin 'kchmck/vim-coffee-script'       " Coffee
 Plugin 'HerringtonDarkholme/yats.vim'   " Typescript
 Plugin 'mxw/vim-jsx'                    " JSX
+Plugin 'ianks/vim-tsx'                  " TSX
 
 " Git helpers
 Plugin 'airblade/vim-gitgutter'         " Gitgutter
