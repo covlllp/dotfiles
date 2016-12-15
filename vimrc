@@ -104,9 +104,6 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
-" Use clipboard for copy and paste
-" set clipboard=unnamed
-
 " Show matching brackets when text indicator is over them
 set showmatch
 set mat=2      " How many tenths of a second to blink when matching
@@ -123,21 +120,20 @@ set splitright
 set shell=zsh
 
 " Syntax highlighting on
-syntax on
+syntax enable
 
 " Set colorscheme to oceanic
 set t_Co=256
-set background=dark
 colorscheme OceanicNext
 
 
 " --- Plugin Settings --- "
 
 " Syntastic
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 let g:syntastic_python_pylint_post_args="--max-line-length=120"
 
 " Airline
