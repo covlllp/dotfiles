@@ -4,8 +4,7 @@
 
 2. Load submodules with `git submodule init && git submodule update`
 
-3. Install prompt-pure: `npm install -g pure-prompt`
-  - You might have to add the symbolic links on your own without homebrew
+3. Install prompt-pure: `sudo source ~/dotfiles/load_pure_prompt.sh`
 
 4. Setup symlinks to dotfiles `source ~/dotfiles/setup_home_symlinks.sh`
 
