@@ -2,13 +2,13 @@
 
 1. Clone dotfiles repo `git clone https://github.com/covlllp/dotfiles.git ~/dotfiles`
 
-2. Install prompt-pure: `npm install -g prompt-pure`
+2. Load submodules with `git submodule init && git submodule update`
+
+3. Install prompt-pure: `npm install -g pure-prompt`
   - You might have to add the symbolic links on your own without homebrew
 
-3. Setup symlinks to dotfiles `source ~/dotfiles/setup_home_symlinks.sh`
-
-4. Setup symlinks for sublime (if applicable) `source ~/dotfiles/setup_sublime_symlinks.sh <OSTYPE>`
+4. Setup symlinks to dotfiles `source ~/dotfiles/setup_home_symlinks.sh`
 
 5. Change shell to zsh `chsh -s /bin/zsh`
 
-3. Restart!
+6. Restart!
