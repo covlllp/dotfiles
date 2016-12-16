@@ -1,9 +1,0 @@
-<snippet>
-<content><![CDATA[
-def ${1:name}(${2:params}):
-  {$0}
-]]></content>
-<tabTrigger>req</tabTrigger>
-<scope>source.python</scope>
-<description>def name():</description>
-</snippet>
