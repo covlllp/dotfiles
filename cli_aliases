@@ -23,6 +23,11 @@ if [ "$HOST" = "dbdev" ] ; then
   alias ls="ls -G"
 fi
 
+if [ "$HOST" = "colinvl-linux" ] ; then
+  alias ser="cd /mnt/repos/server"
+  alias sshvm="ssh ec-server"
+fi
+
 # Other common ls commands
 alias ll="ls -l"
 alias la="ls -a"
