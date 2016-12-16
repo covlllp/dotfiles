@@ -21,15 +21,15 @@
   switch_to_tab_9 = <Alt>9
 [profiles]
   [[default]]
-    palette = "#000000:#ee2b2a:#40a33f:#ffea2e:#1e80f0:#8800a0:#16afca:#a4a4a4:#20178d:#dc5c60:#70be71:#fff163:#54a4f3:#aa4dbc:#42c7da:#ffffff"
-    background_color = "#1c262b"
-    cursor_color = "#b3b8c3"
-    foreground_color = "#c2c8d7"
+    scrollbar_position = hidden
+    palette = "#1c262b:#ee2b2a:#40a33f:#ffea2e:#1e80f0:#8800a0:#16afca:#a4a4a4:#777777:#dc5c60:#70be71:#fff163:#54a4f3:#aa4dbc:#42c7da:#ffffff"
     background_image = None
     background_darkness = 0.88
     use_system_font = False
+    cursor_color = "#b3b8c3"
+    foreground_color = "#c2c8d7"
     font = Droid Sans Mono for Powerline 12
-    scrollbar_position = hidden
+    background_color = "#1c262b"
 [layouts]
   [[default]]
     [[[child1]]]

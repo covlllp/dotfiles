@@ -124,6 +124,7 @@ syntax enable
 
 " Set colorscheme to oceanic
 set t_Co=256
+set background=dark
 colorscheme OceanicNext
 
 
