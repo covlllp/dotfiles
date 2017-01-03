@@ -177,6 +177,12 @@ nnoremap ; :
 " esc to jj
 imap jj <Esc>
 
+" navigate by display instead of line
+noremap k gk
+noremap j gj
+noremap 0 g0
+noremap $ g$
+
 " Pane creation
 nnoremap <C-k><C-l> :vnew<CR>
 nnoremap <C-k><C-j> :new<CR>
