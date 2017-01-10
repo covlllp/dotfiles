@@ -38,6 +38,7 @@ Plugin 'junegunn/goyo.vim'              " Distraction-free writing
 Plugin 'mhartington/oceanic-next'       " Oceanic-next
 Plugin 'vim-airline/vim-airline'        " Nice status/tabline
 Plugin 'vim-airline/vim-airline-themes' " status/tabline themes
+Plugin 'Yggdroot/indentLine'            " indent guides
 
 call vundle#end()
 filetype plugin indent on
@@ -168,6 +169,9 @@ let g:goyo_width=100
 " BufKill
 " Close buffer
 map <C-w> :BD<CR>
+
+" indentLine
+let g:indentLine_color_term = 239
 
 " --- Remappings --- "
 
