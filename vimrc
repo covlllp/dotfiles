@@ -13,6 +13,7 @@ Plugin 'ntpeters/vim-better-whitespace' " Better Whitespace removal/highlighting
 Plugin 'tpope/vim-surround'             " Add, edit, remove tags like ', \", (, {
 Plugin 'vim-scripts/tComment'           " Shortcut to toggle comments
 Plugin 'jiangmiao/auto-pairs'           " Auto pairing of tags
+Plugin 'ervandew/supertab'              " Autocomplete
 
 " Code linting
 Plugin 'scrooloose/syntastic'
