@@ -166,6 +166,7 @@ nnoremap <leader>w :StripWhitespace<CR>
 
 " Goyo
 let g:goyo_width=100
+map <leader>g :Goyo<CR>
 
 " BufKill
 " Close buffer
