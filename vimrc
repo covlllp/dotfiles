@@ -24,11 +24,12 @@ Plugin 'scrooloose/nerdtree'            " Sidebar for file directory
 Plugin 'qpkorr/vim-bufkill'             " Buffer management
 
 " Syntax highlighting
-Plugin 'othree/yajs.vim'                " ES6
 Plugin 'kchmck/vim-coffee-script'       " Coffee
-Plugin 'HerringtonDarkholme/yats.vim'   " Typescript
+Plugin 'othree/yajs.vim'                " ES6
 Plugin 'mxw/vim-jsx'                    " JSX
+Plugin 'leafgarland/typescript-vim'     " Typescript
 Plugin 'ianks/vim-tsx'                  " TSX
+Plugin 'cakebaker/scss-syntax.vim'      " SCSS
 
 " Git helpers
 Plugin 'airblade/vim-gitgutter'         " Gitgutter
