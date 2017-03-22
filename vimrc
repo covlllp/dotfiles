@@ -30,6 +30,7 @@ Plugin 'mxw/vim-jsx'                    " JSX
 Plugin 'leafgarland/typescript-vim'     " Typescript
 Plugin 'ianks/vim-tsx'                  " TSX
 Plugin 'cakebaker/scss-syntax.vim'      " SCSS
+Plugin 'groenewege/vim-less'            " Less
 
 " Git helpers
 Plugin 'airblade/vim-gitgutter'         " Gitgutter
