@@ -31,6 +31,7 @@ Plugin 'leafgarland/typescript-vim'     " Typescript
 Plugin 'ianks/vim-tsx'                  " TSX
 Plugin 'cakebaker/scss-syntax.vim'      " SCSS
 Plugin 'groenewege/vim-less'            " Less
+Plugin 'tpope/vim-markdown'             " Markdown
 
 " Git helpers
 Plugin 'airblade/vim-gitgutter'         " Gitgutter
@@ -176,6 +177,11 @@ map <C-w> :BD<CR>
 
 " indentLine
 let g:indentLine_color_term = 239
+
+" Vim Markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+let g:markdown_fenced_languages = ['html', 'python', 'javascript']
+
 
 " --- Remappings --- "
 

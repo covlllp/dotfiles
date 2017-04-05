@@ -39,6 +39,7 @@ fi
 alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
+alias lt="ls -t | head -5"
 
 alias ..="cd .."
 alias cl="clear"
