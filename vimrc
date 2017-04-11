@@ -131,6 +131,7 @@ syntax enable
 set t_Co=256
 set background=dark
 colorscheme OceanicNext
+set term=screen-256color
 
 
 " --- Plugin Settings --- "
