@@ -11,3 +11,6 @@
 5. Change shell to zsh `chsh -s /bin/zsh`
 
 6. Restart!
+
+## Resources
+- Fonts: https://github.com/powerline/fonts
