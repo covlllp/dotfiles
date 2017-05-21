@@ -22,6 +22,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'             " Fuzzy search for files
 Plugin 'scrooloose/nerdtree'            " Sidebar for file directory
 Plugin 'qpkorr/vim-bufkill'             " Buffer management
+Plugin 'schickling/vim-bufonly'         " Buffer deletion
 
 " Syntax highlighting
 Plugin 'kchmck/vim-coffee-script'       " Coffee
@@ -176,6 +177,9 @@ map <leader>g :Goyo<CR>
 " Close buffer
 map <C-w> :BD<CR>
 
+" BufOnly
+map <C-k><C-w> :BufOnly<CR>
+
 " indentLine
 let g:indentLine_color_term = 239
 
@@ -214,8 +218,8 @@ nnoremap <leader>h <C-W><C-h>
 " navigation
 nmap J 5j
 nmap K 5k
-nmap H b
-nmap L w
+nmap H 5h
+nmap L 5l
 
 map <C-k><C-k> zz
 
