@@ -8,6 +8,9 @@ call vundle#begin()
 " Let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" Tmux helpers
+Plugin 'christoomey/vim-tmux-navigator' " Better navigation between tmux and vim
+
 " Text editing helpers
 Plugin 'ntpeters/vim-better-whitespace' " Better Whitespace removal/highlighting
 Plugin 'tpope/vim-surround'             " Add, edit, remove tags like ', \", (, {
@@ -208,12 +211,6 @@ nnoremap <C-k><C-j> :new<CR>
 
 " // to search for selected text
 vnoremap // y/<C-R>"<CR>
-
-" Pane navigation
-nnoremap <leader>l <C-W><C-L>
-nnoremap <leader>k <C-W><C-K>
-nnoremap <leader>j <C-W><C-J>
-nnoremap <leader>h <C-W><C-h>
 
 " navigation
 nmap J 5j
