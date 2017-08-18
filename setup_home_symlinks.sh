@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # Remove old files
-rm ~/.editorconfig
 rm ~/.gitconfig
 rm ~/.gitignore_global
 rm ~/.vimrc
@@ -11,7 +10,6 @@ rm -rf ~/.vim
 rm ~/.config/terminator/config
 
 # Setup symbolic links for files to ~/
-ln -s ~/dotfiles/editorconfig ~/.editorconfig
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/gitignore_global ~/.gitignore_global
 ln -s ~/dotfiles/vimrc ~/.vimrc
