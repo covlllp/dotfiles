@@ -151,7 +151,10 @@ set term=screen-256color
 " let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint' " use local eslint rules
 
 " Ale
-let g:ale_linters = {'javascript': ['eslint']}
+" let g:ale_linters = {
+"       \'javascript': ['eslint'],
+"       \'python': ['all'],
+"       \}
 
 " Airline
 set laststatus=2
