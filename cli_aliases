@@ -21,6 +21,8 @@ if [ "$HOST" = "colinvl-mbp.corp.dropbox.com" ] ; then
   alias sshvm="ssh ec-server"
   alias sshlinux="ssh -A colinvl-linux"
   alias ls="ls -G"
+  alias vi=/usr/local/bin/vim
+  alias vim=/usr/local/bin/vim
 fi
 
 # Extra work VM

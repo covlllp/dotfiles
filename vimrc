@@ -19,7 +19,8 @@ Plugin 'jiangmiao/auto-pairs'           " Auto pairing of tags
 Plugin 'ervandew/supertab'              " Autocomplete
 
 " Code linting
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
 
 " File navigation
 Plugin 'ctrlpvim/ctrlp.vim'             " Fuzzy search for files
@@ -141,11 +142,16 @@ set term=screen-256color
 " --- Plugin Settings --- "
 
 " Syntastic
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_pylint_post_args="--max-line-length=120"
+" let g:syntastic_always_populate_loc_list = 0
+" let g:syntastic_auto_loc_list = 0
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_python_pylint_post_args="--max-line-length=120"
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint' " use local eslint rules
+
+" Ale
+let g:ale_linters = {'javascript': ['eslint']}
 
 " Airline
 set laststatus=2
