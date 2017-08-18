@@ -29,3 +29,6 @@ prompt pure
 
 # Git completion
 autoload -Uz compinit && compinit
+
+# Run neofetch
+neofetch
