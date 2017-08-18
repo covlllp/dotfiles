@@ -21,3 +21,4 @@ Using combination of:
 
 ## Resources
 - Fonts: https://github.com/powerline/fonts
+- Colors: https://github.com/mbadolato/iTerm2-Color-Schemes (Use OceanicMaterial)
