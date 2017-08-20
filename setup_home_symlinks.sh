@@ -20,3 +20,5 @@ ln -s ~/dotfiles/vim ~/.vim
 ln -s ~/dotfiles/terminator_config ~/.config/terminator/config
 ln -s ~/dotfiles/termite_config ~/.config/termite/config
 
+# Setup pure prompt
+source ~/dotfiles/load_pure_prompt

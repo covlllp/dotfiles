@@ -1,9 +1,10 @@
 # Installation
 
+## Apt Packages
+You might need to install git, node, neofetch, and curl
+
 ## Termite
-Using combination of:
 - https://github.com/Corwind/termite-install
-- https://gist.github.com/kaspergrubbe/a93116fe47f3403d5a2e46e5adeadf5a
 
 
 ## Set up everything else
@@ -11,14 +12,18 @@ Using combination of:
 
 2. Load submodules with `git submodule init && git submodule update`
 
-3. Install prompt-pure: `sudo source ~/dotfiles/load_pure_prompt.sh` or `lpp`
+3. Install prompt-pure: `source ~/dotfiles/load_pure_prompt.sh` or `lpp`
 
-4. Setup symlinks to dotfiles `source ~/dotfiles/setup_home_symlinks.sh`
+4. Install powerline fonts: `./fonts/install.sh`
 
-5. Change shell to zsh `chsh -s /bin/zsh`
+5. Setup symlinks to dotfiles `source ~/dotfiles/setup_home_symlinks.sh`
 
-6. Restart!
+6. Change shell to zsh `chsh -s /bin/zsh`
+
+7. Restart!
 
 ## Resources
 - Fonts: https://github.com/powerline/fonts
+- Pure Prompt: https://github.com/sindresorhus/pure
+- Neofetch: https://github.com/dylanaraps/neofetch
 - Colors: https://github.com/mbadolato/iTerm2-Color-Schemes (Use OceanicMaterial)
