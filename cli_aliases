@@ -46,7 +46,7 @@ alias ..="cd .."
 alias cl="clear"
 
 alias v="vi"
-alias tm="tmux"
+alias tm="tmux -u"
 
 # Find commands
 alias f="find . | grep"
