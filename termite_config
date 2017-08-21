@@ -30,4 +30,23 @@ color13 = #aa4dbc
 color14 = #42c7da
 color15 = #ffffff
 
+# Snazzy
+foreground = "#eff0eb"
+color0 =  #000000
+color1 = #fc5d5b
+color2 = #62f592
+color3 = #f3f8a2
+color4 = #5dc8fd
+color5 = #fd6dc0
+color6 = #9dedfd
+color7 = #f1f1f0
+color8 = #686868
+color9 = #fc5d5b
+color10 = #62f592
+color11 = #f3f8a2
+color12 = #5dc8fd
+color13 = #fd6dc0
+color14 = #9dedfd
+color15 = #f1f1f0
+
 [hints]
