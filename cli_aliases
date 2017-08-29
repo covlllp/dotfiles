@@ -19,6 +19,7 @@ if [ "$HOST" = "colinvl-mbp.corp.dropbox.com" ] ; then
   alias ser="cd ~/src/server"
   alias sshvm="ssh ec-server"
   alias sshlinux="ssh -A colinvl-linux"
+  alias sshdevbox="ssh colinvl-dbx"
   alias ls="ls -G"
   alias vi=/usr/local/bin/vim
   alias vim=/usr/local/bin/vim
