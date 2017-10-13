@@ -18,6 +18,9 @@ Plugin 'vim-scripts/tComment'           " Shortcut to toggle comments
 Plugin 'jiangmiao/auto-pairs'           " Auto pairing of tags
 Plugin 'ervandew/supertab'              " Autocomplete
 
+" Zsh integration
+Plugin 'tpope/vim-dispatch'              " Run commands asynchronously
+
 " Code linting
 Plugin 'w0rp/ale'
 
@@ -120,6 +123,9 @@ set mat=2      " How many tenths of a second to blink when matching
 " Line wrapping, but dont' insert newlines
 set wrap
 set textwidth=0 wrapmargin=0
+
+" Show 1 line above/below cursor
+set scrolloff=1
 
 " Pane splitting
 set splitbelow
