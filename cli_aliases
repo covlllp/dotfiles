@@ -36,6 +36,11 @@ if [ "$HOST" = "colinvl-linux" ] ; then
   alias sshvm="ssh ec-server"
 fi
 
+# Extra devbox
+if [ "$HOST" = "colinvl-dbx" ] ; then
+  alias ser="cd ~/src/server"
+fi
+
 # Other common ls commands
 alias ll="ls -l"
 alias la="ls -a"
