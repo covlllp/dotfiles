@@ -84,7 +84,7 @@ set title
 set hidden
 
 " Set ruler
-set colorcolumn=100,120
+set colorcolumn=100
 highlight ColorColumn ctermbg=7
 
 " Set to auto read when a file is changed from the outside
@@ -147,10 +147,6 @@ set term=screen-256color
 " --- Plugin Settings --- "
 
 " Ale
-let g:ale_linters = {
-      \'javascript': ['eslint'],
-      \}
-"       \'python': ['all'],
 
 " Airline
 set laststatus=2
