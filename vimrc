@@ -19,10 +19,11 @@ Plugin 'jiangmiao/auto-pairs'           " Auto pairing of tags
 Plugin 'ervandew/supertab'              " Autocomplete
 
 " Zsh integration
-Plugin 'tpope/vim-dispatch'              " Run commands asynchronously
+Plugin 'tpope/vim-dispatch'             " Run commands asynchronously
 
 " Code linting
 Plugin 'w0rp/ale'
+Plugin 'quramy/tsuquyomi'               " TS plugin
 
 " File navigation
 Plugin 'ctrlpvim/ctrlp.vim'             " Fuzzy search for files
@@ -147,6 +148,10 @@ set term=screen-256color
 " --- Plugin Settings --- "
 
 " Ale
+
+" Tsuquyomi
+let g:tsuquyomi_disable_quickfix = 1
+let g:tsuquyomi_disable_default_mappings = 1
 
 " Airline
 set laststatus=2
