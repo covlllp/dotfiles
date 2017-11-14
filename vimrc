@@ -23,7 +23,7 @@ Plugin 'tpope/vim-dispatch'             " Run commands asynchronously
 
 " Code linting
 Plugin 'w0rp/ale'
-Plugin 'quramy/tsuquyomi'               " TS plugin
+Plugin 'sbdchd/neoformat'               " Autoformater
 
 " File navigation
 Plugin 'ctrlpvim/ctrlp.vim'             " Fuzzy search for files
@@ -90,6 +90,7 @@ highlight ColorColumn ctermbg=7
 
 " Set to auto read when a file is changed from the outside
 set autoread
+:au CursorHold * checktime
 
 " Search settings
 set incsearch  " Find the next match as we type the search
@@ -121,6 +122,9 @@ set whichwrap+=<,>,h,l
 set showmatch
 set mat=2      " How many tenths of a second to blink when matching
 
+" Make pasting better
+set pastetoggle=<leader>q
+
 " Line wrapping, but dont' insert newlines
 set wrap
 set textwidth=0 wrapmargin=0
@@ -149,9 +153,13 @@ set term=screen-256color
 
 " Ale
 
-" Tsuquyomi
-let g:tsuquyomi_disable_quickfix = 1
-let g:tsuquyomi_disable_default_mappings = 1
+" Neoformat
+" Only use Neoformat for typescript files
+augroup fmt
+  autocmd!
+  autocmd BufWritePre *.tsx undojoin | Neoformat
+  autocmd BufWritePre *.ts undojoin | Neoformat
+augroup END
 
 " Airline
 set laststatus=2
