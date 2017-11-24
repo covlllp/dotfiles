@@ -26,7 +26,9 @@ Plugin 'w0rp/ale'
 Plugin 'quramy/tsuquyomi'               " TS plugin
 
 " File navigation
-Plugin 'ctrlpvim/ctrlp.vim'             " Fuzzy search for files
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'               " Fuzzy search for files
+" Plugin 'ctrlpvim/ctrlp.vim'             " Fuzzy search for files
 Plugin 'scrooloose/nerdtree'            " Sidebar for file directory
 Plugin 'qpkorr/vim-bufkill'             " Buffer management
 Plugin 'schickling/vim-bufonly'         " Buffer deletion
@@ -87,6 +89,9 @@ set hidden
 " Set ruler
 set colorcolumn=100
 highlight ColorColumn ctermbg=7
+
+" Enable Elite mode, No arrows
+let g:elite_mode=1
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -172,6 +177,27 @@ let g:ctrlp_custom_ignore = {
 \ 'dir': 'node_modules\|\.git$\|selenium-tests/results\|images',
 \ }
 
+" FZF
+map <C-t> :Buffers<CR>
+map <C-e> :History<CR>
+map <C-p> :Files<CR>
+
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
 " Nerdtree
 map <C-k><C-u> :NERDTreeToggle<CR>
 
@@ -228,6 +254,14 @@ map <C-k><C-k> zz
 
 " clear search highlight
 nnoremap <leader>/ :noh<CR>
+
+" Disable arrow movement, resize splits instead.
+if get(g:, 'elite_mode')
+  nnoremap <Up>    :resize +2<CR>
+  nnoremap <Down>  :resize -2<CR>
+  nnoremap <Left>  :vertical resize +2<CR>
+  nnoremap <Right> :vertical resize -2<CR>
+endif
 
 " open new file
 map <C-o> :edit 
