@@ -25,16 +25,11 @@ if [ "$HOST" = "colinvl-mbp.corp.dropbox.com" ] ; then
   alias vim=/usr/local/bin/vim
 fi
 
-# Extra work VM
-if [ "$HOST" = "dbdev" ] ; then
-  alias ser="cd /srv/server"
-  alias ls="ls -G"
-fi
-
 # Extra linux box
 if [ "$HOST" = "colinvl-linux" ] ; then
   alias ser="cd /mnt/repos/server"
   alias sshvm="ssh ec-server"
+  alias sshdevbox="ssh colinvl-dbx"
 fi
 
 # Extra devbox

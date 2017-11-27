@@ -2,7 +2,7 @@
 allow_bold = true
 clickable_url = true
 dynamic_title = true
-font = NotoMono for Powerline 10
+font = Noto Mono for Powerline 10
 fullscreen = true
 mouse_autohide = true
 scrollback_lines = 10000
