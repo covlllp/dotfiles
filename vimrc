@@ -32,6 +32,7 @@ Plugin 'junegunn/fzf.vim'               " Fuzzy search for files
 Plugin 'scrooloose/nerdtree'            " Sidebar for file directory
 Plugin 'qpkorr/vim-bufkill'             " Buffer management
 Plugin 'schickling/vim-bufonly'         " Buffer deletion
+Plugin 'pbrisbin/vim-mkdir'             " Make directories automatically
 
 " Syntax highlighting
 Plugin 'kchmck/vim-coffee-script'       " Coffee
@@ -189,6 +190,7 @@ let g:ctrlp_custom_ignore = {
 map <C-t> :Buffers<CR>
 map <C-e> :History<CR>
 map <C-p> :Files<CR>
+map <C-f> :BLines<CR>
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
