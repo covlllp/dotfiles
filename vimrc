@@ -95,6 +95,7 @@ highlight ColorColumn ctermbg=7
 let g:elite_mode=1
 
 " Set to auto read when a file is changed from the outside
+set updatetime=1000
 set autoread
 :au CursorHold * checktime
 
@@ -160,11 +161,10 @@ set term=screen-256color
 " Ale
 
 " Neoformat
-" Only use Neoformat for typescript files
+" Only use Neoformat for typescript and javascript files
 augroup fmt
   autocmd!
-  autocmd BufWritePre *.tsx undojoin | Neoformat
-  autocmd BufWritePre *.ts undojoin | Neoformat
+  autocmd BufWritePre *.tsx,*.jsx,*.ts,*.js undojoin | Neoformat
 augroup END
 
 " Airline
@@ -177,19 +177,10 @@ let g:airline#extensions#tabline#enabled = 1
 " JSX syntax
 let g:jsx_ext_required = 0
 
-" CtrlP
-map <C-t> :CtrlPBuffer<CR>
-map <C-e> :CtrlPMRU<CR>
-map <leader>c :CtrlPClearCache<CR>
-let g:ctrlp_max_files=0
-let g:ctrlp_custom_ignore = {
-\ 'dir': 'node_modules\|\.git$\|selenium-tests/results\|images',
-\ }
-
 " FZF
 map <C-t> :Buffers<CR>
 map <C-e> :History<CR>
-map <C-p> :Files<CR>
+map <C-p> :GFiles<CR>
 map <C-f> :BLines<CR>
 
 " Customize fzf colors to match your color scheme
