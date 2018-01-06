@@ -20,21 +20,19 @@ if [ "$HOST" = "colinvl-mbp.corp.dropbox.com" ] ; then
   alias vim=/usr/local/bin/vim
 fi
 
-# Extra work VM
-if [ "$HOST" = "dbdev" ] ; then
-  alias ser="cd /srv/server"
-  alias ls="ls -G"
-fi
-
 # Extra linux box
 if [ "$HOST" = "colinvl-linux" ] ; then
   alias ser="cd /mnt/repos/server"
   alias sshvm="ssh ec-server"
+  alias sshdevbox="ssh colinvl-dbx"
 fi
 
 # Extra devbox
 if [ "$HOST" = "colinvl-dbx" ] ; then
   alias ser="cd ~/src/server"
+  alias brl="bzl itest-reload //services/metaserver:metaserver_selenium_and_jasmine"
+  alias brs="bzl itest-stop-all && bzl itest-start //services/metaserver:metaserver_selenium_and_jasmine && bzl build //tools:all"
+  PATH="$PATH:$HOME/src/server/bazel-bin/tools/"
 fi
 
 # Other common ls commands

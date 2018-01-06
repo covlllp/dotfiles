@@ -23,7 +23,7 @@ Plugin 'tpope/vim-dispatch'             " Run commands asynchronously
 
 " Code linting
 Plugin 'w0rp/ale'
-Plugin 'quramy/tsuquyomi'               " TS plugin
+Plugin 'sbdchd/neoformat'               " Autoformater
 
 " File navigation
 Plugin 'junegunn/fzf'
@@ -32,6 +32,7 @@ Plugin 'junegunn/fzf.vim'               " Fuzzy search for files
 Plugin 'scrooloose/nerdtree'            " Sidebar for file directory
 Plugin 'qpkorr/vim-bufkill'             " Buffer management
 Plugin 'schickling/vim-bufonly'         " Buffer deletion
+Plugin 'pbrisbin/vim-mkdir'             " Make directories automatically
 
 " Syntax highlighting
 Plugin 'kchmck/vim-coffee-script'       " Coffee
@@ -94,7 +95,9 @@ highlight ColorColumn ctermbg=7
 let g:elite_mode=1
 
 " Set to auto read when a file is changed from the outside
+set updatetime=1000
 set autoread
+:au CursorHold * checktime
 
 " Search settings
 set incsearch  " Find the next match as we type the search
@@ -126,6 +129,9 @@ set whichwrap+=<,>,h,l
 set showmatch
 set mat=2      " How many tenths of a second to blink when matching
 
+" Make pasting better
+set pastetoggle=<leader>q
+
 " Line wrapping, but dont' insert newlines
 set wrap
 set textwidth=0 wrapmargin=0
@@ -154,9 +160,12 @@ set term=screen-256color
 
 " Ale
 
-" Tsuquyomi
-let g:tsuquyomi_disable_quickfix = 1
-let g:tsuquyomi_disable_default_mappings = 1
+" Neoformat
+" Only use Neoformat for typescript and javascript files
+augroup fmt
+  autocmd!
+  autocmd BufWritePre *.tsx,*.jsx,*.ts,*.js undojoin | Neoformat
+augroup END
 
 " Airline
 set laststatus=2
@@ -168,19 +177,11 @@ let g:airline#extensions#tabline#enabled = 1
 " JSX syntax
 let g:jsx_ext_required = 0
 
-" CtrlP
-map <C-t> :CtrlPBuffer<CR>
-map <C-e> :CtrlPMRU<CR>
-map <leader>c :CtrlPClearCache<CR>
-let g:ctrlp_max_files=0
-let g:ctrlp_custom_ignore = {
-\ 'dir': 'node_modules\|\.git$\|selenium-tests/results\|images',
-\ }
-
 " FZF
 map <C-t> :Buffers<CR>
 map <C-e> :History<CR>
-map <C-p> :Files<CR>
+map <C-p> :GFiles<CR>
+map <C-f> :BLines<CR>
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
