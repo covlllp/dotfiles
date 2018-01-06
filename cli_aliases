@@ -13,11 +13,6 @@ fi
 
 # Extra work laptop
 if [ "$HOST" = "colinvl-mbp.corp.dropbox.com" ] ; then
-  alias linux_connect="source ~/Dropbox/Computer/scripts/open_linux_connection.sh"
-  alias clean_linux="source ~/Dropbox/Computer/scripts/cleanup_linux_connection.sh"
-
-  alias ser="cd ~/src/server"
-  alias sshvm="ssh ec-server"
   alias sshlinux="ssh -A colinvl-linux"
   alias sshdevbox="ssh colinvl-dbx"
   alias ls="ls -G"
