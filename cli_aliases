@@ -37,6 +37,7 @@ if [ "$HOST" = "colinvl-dbx" ] ; then
   alias ser="cd ~/src/server"
   alias brl="bzl itest-reload //services/metaserver:metaserver_selenium_and_jasmine"
   alias brs="bzl itest-stop-all && bzl itest-start //services/metaserver:metaserver_selenium_and_jasmine && bzl build //tools:all"
+  alias mypy="./ci/mypy-run"
   PATH="$PATH:$HOME/src/server/bazel-bin/tools/"
 fi
 
