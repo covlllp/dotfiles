@@ -4,6 +4,9 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 export TERM="xterm-256color"
 
+# Configure fzf to use ag
+export FZF_DEFAULT_COMMAND='ag -g ""'
+
 alias ls="ls --color=auto"
 
 # Extra linux things
