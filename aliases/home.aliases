@@ -1,0 +1,5 @@
+# Extra linux things
+if [ "$HOST" = "localhost" ] ; then
+  alias ser="cd ~/tou-usb/projects"
+fi
+
