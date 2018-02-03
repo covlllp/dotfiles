@@ -151,7 +151,6 @@ syntax enable
 
 " Set colorscheme to oceanic
 set t_Co=256
-set background=dark
 colorscheme OceanicNext
 set term=screen-256color
 
@@ -181,7 +180,7 @@ let g:jsx_ext_required = 0
 map <C-t> :Buffers<CR>
 map <C-e> :History<CR>
 map <C-p> :GFiles<CR>
-map <C-f> :BLines<CR>
+map <C-f> :Lines<CR>
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
@@ -201,6 +200,7 @@ let g:fzf_colors =
 
 " Nerdtree
 map <C-k><C-u> :NERDTreeToggle<CR>
+map <C-k><C-r> :NERDTreeFind<CR>
 
 " Fix whitespace
 nnoremap <leader>w :StripWhitespace<CR>
@@ -222,6 +222,9 @@ let g:indentLine_color_term = 239
 " Vim Markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 let g:markdown_fenced_languages = ['html', 'python', 'javascript']
+
+" vim surround
+nmap s ysiw
 
 
 " --- Remappings --- "

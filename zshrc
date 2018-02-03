@@ -1,5 +1,5 @@
 source ~/dotfiles/antigen/antigen.zsh
-source ~/dotfiles/cli_aliases
+source ~/dotfiles/cli.aliases
 
 # Load the oh-my-zsh's library
 antigen use oh-my-zsh
