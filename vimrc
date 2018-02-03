@@ -180,7 +180,7 @@ let g:jsx_ext_required = 0
 map <C-t> :Buffers<CR>
 map <C-e> :History<CR>
 map <C-p> :GFiles<CR>
-map <C-f> :Lines<CR>
+map <C-f> :BLines<CR>
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
