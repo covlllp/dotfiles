@@ -57,7 +57,7 @@ alias v="vi"
 alias tm="tmux -u"
 
 # Find commands
-alias f="find . | grep"
+alias f="find . | ag"
 alias t="tail -f"
 alias grepr="grep -R"
 
