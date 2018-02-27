@@ -18,6 +18,12 @@ Plugin 'vim-scripts/tComment'           " Shortcut to toggle comments
 Plugin 'jiangmiao/auto-pairs'           " Auto pairing of tags
 Plugin 'ervandew/supertab'              " Autocomplete
 
+" Snippets
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'grvcoelho/vim-javascript-snippets'
+
 " Zsh integration
 Plugin 'tpope/vim-dispatch'             " Run commands asynchronously
 
@@ -28,7 +34,6 @@ Plugin 'sbdchd/neoformat'               " Autoformater
 " File navigation
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'               " Fuzzy search for files
-" Plugin 'ctrlpvim/ctrlp.vim'             " Fuzzy search for files
 Plugin 'scrooloose/nerdtree'            " Sidebar for file directory
 Plugin 'qpkorr/vim-bufkill'             " Buffer management
 Plugin 'schickling/vim-bufonly'         " Buffer deletion
@@ -88,7 +93,7 @@ set title
 set hidden
 
 " Set ruler
-set colorcolumn=100
+set colorcolumn=80,100
 highlight ColorColumn ctermbg=7
 
 " Enable Elite mode, No arrows
