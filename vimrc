@@ -48,6 +48,7 @@ Plugin 'ianks/vim-tsx'                  " TSX
 Plugin 'cakebaker/scss-syntax.vim'      " SCSS
 Plugin 'groenewege/vim-less'            " Less
 Plugin 'tpope/vim-markdown'             " Markdown
+Plugin 'dirn/stone.vim'                 " Stone
 
 " Git helpers
 Plugin 'airblade/vim-gitgutter'         " Gitgutter
@@ -59,6 +60,7 @@ Plugin 'mhartington/oceanic-next'       " Oceanic-next
 Plugin 'vim-airline/vim-airline'        " Nice status/tabline
 Plugin 'vim-airline/vim-airline-themes' " status/tabline themes
 Plugin 'Yggdroot/indentLine'            " indent guides
+Plugin 'machakann/vim-highlightedyank'  " highlights yanks
 
 call vundle#end()
 filetype plugin indent on
