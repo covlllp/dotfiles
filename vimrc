@@ -22,7 +22,7 @@ Plugin 'ervandew/supertab'              " Autocomplete
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
-Plugin 'grvcoelho/vim-javascript-snippets'
+Plugin 'honza/vim-snippets'
 
 " Zsh integration
 Plugin 'tpope/vim-dispatch'             " Run commands asynchronously
