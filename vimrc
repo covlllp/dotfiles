@@ -186,8 +186,11 @@ let g:jsx_ext_required = 0
 " FZF
 map <C-t> :Buffers<CR>
 map <C-e> :History<CR>
-map <C-p> :GFiles<CR>
+map <C-p> :Files<CR>
+map <C-i> :GFiles<CR>
 map <C-f> :BLines<CR>
+
+nnoremap <leader>ag :Ag
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
@@ -228,7 +231,7 @@ let g:indentLine_color_term = 239
 
 " Vim Markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-let g:markdown_fenced_languages = ['html', 'python', 'javascript']
+let g:markdown_fenced_languages = ['html', 'python', 'javascript', 'java']
 
 " vim surround
 nmap s ysiw
