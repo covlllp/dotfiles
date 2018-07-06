@@ -15,8 +15,8 @@ fi
 # Extra devbox
 if [ "$HOST" = "colinvl-dbx" ] ; then
   alias ser="cd ~/src/server"
-  alias brl="bzl itest-reload //services/metaserver:metaserver_selenium_dev"
-  alias brs="bzl itest-stop-all && bzl itest-start //services/metaserver:metaserver_selenium_dev && bzl build //tools:all"
+  alias brl="bzl itest-reload //services/metaserver:metaserver_with_previews"
+  alias brs="bzl itest-stop-all && bzl itest-start //services/metaserver:metaserver_with_previews && bzl build //tools:all"
   alias mypy="./ci/mypy-run"
   alias typecheck="bzl test //metaserver/static/js:typecheck"
   alias jest="bzl tool //metaserver/static/js/jest "

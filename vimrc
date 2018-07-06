@@ -158,6 +158,7 @@ syntax enable
 
 " Set colorscheme to oceanic
 set t_Co=256
+let g:oceanic_next_terminal_bold = 1
 colorscheme OceanicNext
 set term=screen-256color
 
