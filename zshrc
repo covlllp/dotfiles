@@ -19,6 +19,9 @@ antigen bundle zsh_reload
 # Tmux!
 antigen bundle tmux
 
+# Apply antigen plugins
+antigen apply
+
 # Bind ctrl + space to autoaccept
 bindkey '^ ' autosuggest-accept
 
