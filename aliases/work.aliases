@@ -19,6 +19,7 @@ if [ "$HOST" = "colinvl-dbx" ] ; then
   alias brs="bzl itest-stop-all && bzl itest-start //services/metaserver:metaserver_with_previews && bzl build //tools:all"
   alias mypy="./ci/mypy-run"
   alias typecheck="bzl test //metaserver/static/js:typecheck"
+  alias typecheck_jest="bzl test //metaserver/static/js:typecheck_with_jest_tests"
   alias jest="bzl tool //metaserver/static/js/jest "
   alias db_jest="NODEARGS='--inspect=0.0.0.0' bzl tool //metaserver/static/js/jest "
   PATH="$PATH:$HOME/src/server/bazel-bin/tools/"
