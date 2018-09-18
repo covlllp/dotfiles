@@ -22,6 +22,9 @@ antigen bundle tmux
 # Apply antigen plugins
 antigen apply
 
+# Vim navigation
+bindkey -v
+
 # Bind ctrl + space to autoaccept
 bindkey '^ ' autosuggest-accept
 

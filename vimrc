@@ -60,6 +60,7 @@ Plugin 'mhartington/oceanic-next'       " Oceanic-next
 Plugin 'vim-airline/vim-airline'        " Nice status/tabline
 Plugin 'Yggdroot/indentLine'            " indent guides
 Plugin 'machakann/vim-highlightedyank'  " highlights yanks
+Plugin 'rrethy/vim-illuminate'          " highlights current word
 
 call vundle#end()
 filetype plugin indent on
@@ -83,6 +84,7 @@ set mouse=a
 
 " Show line numbers
 set number
+set relativenumber
 
 " Highlight the line we're on
 set cursorline
