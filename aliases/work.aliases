@@ -1,9 +1,14 @@
-# Extra work laptop
+# Extra mac work laptop
 if [ "$HOST" = "colinvl-mbp.corp.dropbox.com" ] ; then
   alias sshdevbox="ssh colinvl-dbx"
   alias ls="ls -G"
   alias vi=/usr/local/bin/vim
   alias vim=/usr/local/bin/vim
+fi
+
+# Extra linux work laptop
+if [ "$HOST" = "colinvl-XPS-13-9370" ] ; then
+  alias sshdevbox="ssh colinvl-dbx"
 fi
 
 # Extra devbox
