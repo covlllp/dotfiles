@@ -7,7 +7,6 @@ rm ~/.vimrc
 rm ~/.zshrc
 rm ~/.tmux.conf
 rm -rf ~/.vim
-rm ~/.config/terminator/config
 rm ~/.config/termite/config
 
 # Setup symbolic links for files to ~/
@@ -17,8 +16,7 @@ ln -s ~/dotfiles/vimrc ~/.vimrc
 ln -s ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/vim ~/.vim
-ln -s ~/dotfiles/terminator_config ~/.config/terminator/config
 ln -s ~/dotfiles/termite_config ~/.config/termite/config
 
 # Setup pure prompt
-source ~/dotfiles/load_pure_prompt
+source ~/dotfiles/load_pure_prompt.sh

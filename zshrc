@@ -38,3 +38,5 @@ autoload -Uz compinit && compinit
 
 # Run neofetch
 neofetch
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
