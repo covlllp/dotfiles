@@ -5,6 +5,7 @@ source ~/dotfiles/cli.aliases
 antigen use oh-my-zsh
 
 # Bundle gitfast
+antigen bundle git
 antigen bundle gitfast
 
 # Syntax highlighting bundle.

@@ -8,6 +8,7 @@ export TERM="xterm-256color"
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
 alias ls="ls --color=auto"
+alias ls='ls -G'
 
 # Source work and personal aliases
 source ~/dotfiles/aliases/work.aliases
