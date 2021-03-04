@@ -17,8 +17,9 @@ Plugin 'tpope/vim-surround'             " Add, edit, remove tags like ', \", (, 
 Plugin 'vim-scripts/tComment'           " Shortcut to toggle comments
 Plugin 'jiangmiao/auto-pairs'           " Auto pairing of tags
 Plugin 'ervandew/supertab'              " Autocomplete
+Plugin 'iamcco/markdown-preview.nvim'   " Markdown previews
 
-" Snippets
+"Snippets
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
@@ -26,9 +27,8 @@ Plugin 'honza/vim-snippets'
 " Zsh integration
 Plugin 'tpope/vim-dispatch'             " Run commands asynchronously
 
-" Code linting
+" Code linting and fixing
 Plugin 'w0rp/ale'
-Plugin 'sbdchd/neoformat'               " Autoformater
 
 " File navigation
 Plugin 'junegunn/fzf'
@@ -166,13 +166,17 @@ set term=screen-256color
 " --- Plugin Settings --- "
 
 " Ale
+" Enable only flow type-checking, not tsserver
+let g:ale_linters = {'javascript':['eslint', 'flow-language-server']}
 
-" Neoformat
-" Only use Neoformat for typescript and javascript files
-augroup fmt
-  autocmd!
-  autocmd BufWritePre *.tsx,*.jsx,*.ts,*.js undojoin | Neoformat
-augroup END
+" Use ale for prettier
+let g:ale_fixers = {
+      \  'javascript': ['prettier'],
+      \  'css': ['prettier'],
+      \}
+
+" Run Ale fixes on save
+let g:ale_fix_on_save = 1
 
 " Airline
 set laststatus=2
@@ -237,6 +241,8 @@ let g:markdown_fenced_languages = ['html', 'python', 'javascript', 'java']
 " vim surround
 nmap s ysiw
 
+" Markdown preview
+let g:mkdp_auto_start = 1
 
 " --- Remappings --- "
 
