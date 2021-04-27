@@ -173,6 +173,7 @@ let g:ale_linters = {'javascript':['eslint', 'flow-language-server']}
 let g:ale_fixers = {
       \  'javascript': ['prettier'],
       \  'css': ['prettier'],
+      \  'python': ['black'],
       \}
 
 " Run Ale fixes on save
