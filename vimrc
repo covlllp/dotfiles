@@ -167,12 +167,13 @@ set term=screen-256color
 
 " Ale
 " Enable only flow type-checking, not tsserver
-let g:ale_linters = {'javascript':['eslint', 'flow-language-server']}
+" let g:ale_linters = {'javascript':['eslint', 'flow-language-server']}
 
 " Use ale for prettier
 let g:ale_fixers = {
       \  'javascript': ['prettier'],
       \  'css': ['prettier'],
+      \  'python': ['black'],
       \}
 
 " Run Ale fixes on save

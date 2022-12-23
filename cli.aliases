@@ -37,3 +37,6 @@ alias lpp="source ~/dotfiles/load_pure_prompt"
 # Exit commands
 alias q="exit"
 alias :q="exit"
+
+# export default path
+export PATH="$HOME/.local/bin:$PATH"
