@@ -20,7 +20,9 @@ You might need to install git, node, neofetch, and curl
 
 6. Change shell to zsh `chsh -s /bin/zsh`
 
-7. Restart!
+7. Install vim plugins with `:PluginInstall`
+
+8. Restart!
 
 ## Resources
 - Fonts: https://github.com/powerline/fonts
