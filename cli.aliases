@@ -32,7 +32,8 @@ alias t="tail -f"
 alias grepr="grep -R"
 
 # Loading pureprompt
-alias lpp="source ~/dotfiles/load_pure_prompt"
+alias lpp="source ~/dotfiles/load_pure_prompt.sh"
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 
 # Exit commands
 alias q="exit"
