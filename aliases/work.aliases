@@ -1,25 +1,18 @@
-# Extra mac work laptop
-if [ "$HOST" = "colinvl-mbp.corp.dropbox.com" ] ; then
-  alias sshdevbox="ssh colinvl-dbx"
-  alias ls="ls -G"
-  alias vi=/usr/local/bin/vim
-  alias vim=/usr/local/bin/vim
-fi
 
-# Extra linux work laptop
-if [ "$HOST" = "colinvl-XPS-13-9370" ] ; then
-  alias sshdevbox="ssh colinvl-dbx"
-fi
+# Watershed
+export WS_USER=colin
 
-# Extra devbox
-if [ "$HOST" = "colinvl-dbx" ] ; then
-  alias ser="cd ~/src/server"
-  alias brl="bzl itest-reload //services/metaserver/previews:previews"
-  alias brs="bzl itest-stop-all && bzl itest-start //services/metaserver/previews:previews && bzl build //tools:all"
-  alias mypy="./ci/mypy-daemon"
-  alias typecheck="bzl test //metaserver/static/js:typecheck"
-  alias typecheck_jest="bzl test //metaserver/static/js:typecheck_with_jest_tests"
-  alias jest="bzl tool //metaserver/static/js/jest "
-  alias db_jest="NODEARGS='--inspect=0.0.0.0' bzl tool //metaserver/static/js/jest "
-  PATH="$PATH:$HOME/src/server/bazel-bin/tools/"
-fi
+# postgresql
+export PATH="$(brew --prefix postgresql@11)/bin:$PATH"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
+
+# nodenv
+eval "$(nodenv init -)"
+
+# ghg script completions
+source '/Users/colin/ghg/scripts/completions.sh'

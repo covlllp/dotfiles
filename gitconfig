@@ -33,6 +33,7 @@
 	conflictstyle = diff3
 [push]
 	default = simple
+	autoSetupRemote = true
 [format]
   pretty = format:"%C(auto,yellow)commit %H%C(auto,reset)\nAuthor: %an <%ae>\nDate:   %cd\n\n%w(0,4,4)%B"
 [log]
