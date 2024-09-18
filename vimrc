@@ -243,7 +243,7 @@ let g:markdown_fenced_languages = ['html', 'python', 'javascript', 'java']
 nmap s ysiw
 
 " Markdown preview
-let g:mkdp_auto_start = 1
+noremap <leader>mp :MarkdownPreview<CR>
 
 " --- Remappings --- "
 
