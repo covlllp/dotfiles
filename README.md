@@ -22,6 +22,8 @@ You might need to install git, node, neofetch, and curl
 
 7. Install vim plugins with `:PluginInstall`
 
+8. [Optional] Install Copilot with `:Copilot setup`
+
 8. Restart!
 
 ## Resources

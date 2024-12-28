@@ -39,7 +39,6 @@ Plugin 'schickling/vim-bufonly'         " Buffer deletion
 Plugin 'pbrisbin/vim-mkdir'             " Make directories automatically
 
 " Syntax highlighting
-Plugin 'kchmck/vim-coffee-script'       " Coffee
 Plugin 'othree/yajs.vim'                " ES6
 Plugin 'mxw/vim-jsx'                    " JSX
 Plugin 'leafgarland/typescript-vim'     " Typescript
@@ -47,7 +46,6 @@ Plugin 'ianks/vim-tsx'                  " TSX
 Plugin 'cakebaker/scss-syntax.vim'      " SCSS
 Plugin 'groenewege/vim-less'            " Less
 Plugin 'tpope/vim-markdown'             " Markdown
-Plugin 'dirn/stone.vim'                 " Stone
 
 " Git helpers
 Plugin 'airblade/vim-gitgutter'         " Gitgutter
@@ -60,6 +58,10 @@ Plugin 'vim-airline/vim-airline'        " Nice status/tabline
 Plugin 'Yggdroot/indentLine'            " indent guides
 Plugin 'machakann/vim-highlightedyank'  " highlights yanks
 Plugin 'rrethy/vim-illuminate'          " highlights current word
+
+" AI
+Plugin 'github/copilot.vim'
+
 
 call vundle#end()
 filetype plugin indent on
