@@ -58,6 +58,7 @@ Plugin 'vim-airline/vim-airline'        " Nice status/tabline
 Plugin 'Yggdroot/indentLine'            " indent guides
 Plugin 'machakann/vim-highlightedyank'  " highlights yanks
 Plugin 'rrethy/vim-illuminate'          " highlights current word
+Plugin 'terryma/vim-smooth-scroll'      " Smooth scrolling
 
 " AI
 Plugin 'github/copilot.vim'
@@ -246,6 +247,12 @@ nmap s ysiw
 
 " Markdown preview
 noremap <leader>mp :MarkdownPreview<CR>
+
+" Smooth scroll
+noremap <silent> <C-u> :call smooth_scroll#up(&scroll, 0, 1)<CR>
+noremap <silent> <C-d> :call smooth_scroll#down(&scroll, 0, 1)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 2)<CR>
+
 
 " --- Remappings --- "
 
