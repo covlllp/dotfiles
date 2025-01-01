@@ -20,7 +20,7 @@ You might need to install git, node, neofetch, and curl
 
 6. Change shell to zsh `chsh -s /bin/zsh`
 
-7. Install vim plugins with `:PluginInstall`
+7. Install vim plugins with `:PlugInstall`
 
 8. [Optional] Install Copilot with `:Copilot setup`
 
