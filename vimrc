@@ -22,7 +22,9 @@ Plug 'jiangmiao/auto-pairs'           " Auto pairing of tags
 Plug 'ervandew/supertab'              " Autocomplete
 Plug 'iamcco/markdown-preview.nvim'   " Markdown previews
 
-"Snippets
+" Snippets
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 
 " Zsh integration
 Plug 'tpope/vim-dispatch'             " Run commands asynchronously
@@ -253,6 +255,9 @@ noremap <leader>mp :MarkdownPreview<CR>
 noremap <silent> <C-u> :call smooth_scroll#up(&scroll, 0, 1)<CR>
 noremap <silent> <C-d> :call smooth_scroll#down(&scroll, 0, 1)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 2)<CR>
+
+" CoC settings
+let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-markdownlint']
 
 
 " --- Remappings --- "
