@@ -20,9 +20,6 @@ Plugin 'ervandew/supertab'              " Autocomplete
 Plugin 'iamcco/markdown-preview.nvim'   " Markdown previews
 
 "Snippets
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'honza/vim-snippets'
 
 " Zsh integration
 Plugin 'tpope/vim-dispatch'             " Run commands asynchronously
