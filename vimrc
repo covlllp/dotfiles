@@ -1,68 +1,72 @@
 set nocompatible
 
-" --- VUNDLE SETUP --- "
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" --- Vim Plug Setup --- "
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+    silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+      autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" Let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+
+" --- Plugins --- "
+call plug#begin()
 
 " Tmux helpers
-Plugin 'christoomey/vim-tmux-navigator' " Better navigation between tmux and vim
+Plug 'christoomey/vim-tmux-navigator' " Better navigation between tmux and vim
 
 " Text editing helpers
-Plugin 'ntpeters/vim-better-whitespace' " Better Whitespace removal/highlighting
-Plugin 'tpope/vim-surround'             " Add, edit, remove tags like ', \", (, {
-Plugin 'vim-scripts/tComment'           " Shortcut to toggle comments
-Plugin 'jiangmiao/auto-pairs'           " Auto pairing of tags
-Plugin 'ervandew/supertab'              " Autocomplete
-Plugin 'iamcco/markdown-preview.nvim'   " Markdown previews
+Plug 'ntpeters/vim-better-whitespace' " Better Whitespace removal/highlighting
+Plug 'tpope/vim-surround'             " Add, edit, remove tags like ', \", (, {
+Plug 'vim-scripts/tComment'           " Shortcut to toggle comments
+Plug 'jiangmiao/auto-pairs'           " Auto pairing of tags
+Plug 'ervandew/supertab'              " Autocomplete
+Plug 'iamcco/markdown-preview.nvim'   " Markdown previews
 
 "Snippets
 
 " Zsh integration
-Plugin 'tpope/vim-dispatch'             " Run commands asynchronously
+Plug 'tpope/vim-dispatch'             " Run commands asynchronously
 
 " Code linting and fixing
-Plugin 'w0rp/ale'
+Plug 'w0rp/ale'
 
 " File navigation
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'               " Fuzzy search for files
-Plugin 'scrooloose/nerdtree'            " Sidebar for file directory
-Plugin 'qpkorr/vim-bufkill'             " Buffer management
-Plugin 'schickling/vim-bufonly'         " Buffer deletion
-Plugin 'pbrisbin/vim-mkdir'             " Make directories automatically
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'               " Fuzzy search for files
+Plug 'scrooloose/nerdtree'            " Sidebar for file directory
+Plug 'qpkorr/vim-bufkill'             " Buffer management
+Plug 'schickling/vim-bufonly'         " Buffer deletion
+Plug 'pbrisbin/vim-mkdir'             " Make directories automatically
 
 " Syntax highlighting
-Plugin 'othree/yajs.vim'                " ES6
-Plugin 'mxw/vim-jsx'                    " JSX
-Plugin 'leafgarland/typescript-vim'     " Typescript
-Plugin 'ianks/vim-tsx'                  " TSX
-Plugin 'cakebaker/scss-syntax.vim'      " SCSS
-Plugin 'groenewege/vim-less'            " Less
-Plugin 'tpope/vim-markdown'             " Markdown
+Plug 'othree/yajs.vim'                " ES6
+Plug 'mxw/vim-jsx'                    " JSX
+Plug 'leafgarland/typescript-vim'     " Typescript
+Plug 'ianks/vim-tsx'                  " TSX
+Plug 'cakebaker/scss-syntax.vim'      " SCSS
+Plug 'groenewege/vim-less'            " Less
+Plug 'tpope/vim-markdown'             " Markdown
 
 " Git helpers
-Plugin 'airblade/vim-gitgutter'         " Gitgutter
-Plugin 'tpope/vim-fugitive'             " Helpful git stuff
+Plug 'airblade/vim-gitgutter'         " Gitgutter
+Plug 'tpope/vim-fugitive'             " Helpful git stuff
 
 " Vim UI improvements
-Plugin 'junegunn/goyo.vim'              " Distraction-free writing
-Plugin 'mhartington/oceanic-next'       " Oceanic-next
-Plugin 'vim-airline/vim-airline'        " Nice status/tabline
-Plugin 'Yggdroot/indentLine'            " indent guides
-Plugin 'machakann/vim-highlightedyank'  " highlights yanks
-Plugin 'rrethy/vim-illuminate'          " highlights current word
-Plugin 'terryma/vim-smooth-scroll'      " Smooth scrolling
+Plug 'junegunn/goyo.vim'              " Distraction-free writing
+Plug 'mhartington/oceanic-next'       " Oceanic-next
+Plug 'vim-airline/vim-airline'        " Nice status/tabline
+Plug 'Yggdroot/indentLine'            " indent guides
+Plug 'machakann/vim-highlightedyank'  " highlights yanks
+Plug 'rrethy/vim-illuminate'          " highlights current word
+Plug 'terryma/vim-smooth-scroll'      " Smooth scrolling
 
 " AI
-Plugin 'github/copilot.vim'
+Plug 'github/copilot.vim'
 
 
-call vundle#end()
-filetype plugin indent on
+" --- End Plugins --- "
+call plug#end()
+
 
 
 " --- Set VIM config --- "
