@@ -244,6 +244,7 @@ let g:indentLine_color_term = 239
 " Vim Markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 let g:markdown_fenced_languages = ['html', 'python', 'javascript', 'java']
+let g:markdown_syntax_conceal = 0
 
 " vim surround
 nmap s ysiw
@@ -258,6 +259,12 @@ noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 2)<CR>
 
 " CoC settings
 let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-markdownlint']
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" " <C-g>u breaks current undo, please make your own choice
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                             \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>""
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-@> coc#refresh()
 
 
 " --- Remappings --- "

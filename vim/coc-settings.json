@@ -1,4 +1,6 @@
 {
+  "colors.enable": true,
+  "suggest.removeDuplicates": true,
   "markdownlint.config": {
     "line-length": false
   }
