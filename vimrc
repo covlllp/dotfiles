@@ -20,7 +20,7 @@ Plug 'tpope/vim-surround'             " Add, edit, remove tags like ', \", (, {
 Plug 'vim-scripts/tComment'           " Shortcut to toggle comments
 Plug 'jiangmiao/auto-pairs'           " Auto pairing of tags
 Plug 'ervandew/supertab'              " Autocomplete
-Plug 'iamcco/markdown-preview.nvim'   " Markdown previews
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install'  } " Markdown previews
 
 " Snippets
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
