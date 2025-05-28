@@ -178,6 +178,7 @@ set term=screen-256color
 " Use ale for prettier
 let g:ale_fixers = {
       \  'javascript': ['prettier'],
+      \  'typescript': ['prettier'],
       \  'css': ['prettier'],
       \  'python': ['black'],
       \}

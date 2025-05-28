@@ -8,7 +8,7 @@ rm ~/.zshrc
 rm ~/.tmux.conf
 rm -rf ~/.vim
 rm ~/.config/termite/config
-rm ~/.prettierrc.config.js
+rm ~/.prettierrc.json
 
 # Setup symbolic links for files to ~/
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
@@ -18,7 +18,7 @@ ln -s ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/vim ~/.vim
 ln -s ~/dotfiles/termite_config ~/.config/termite/config
-ln -s ~/dotfiles/.prettierrc.config.js ~/.prettierrc.config.js
+ln -s ~/dotfiles/prettierrc.json ~/.prettierrc.json
 
 # Setup pure prompt
 source ~/dotfiles/load_pure_prompt.sh
