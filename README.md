@@ -12,7 +12,7 @@ You might need to install git, node, neofetch, and curl
 
 2. Load submodules with `git submodule init && git submodule update`
 
-3. Install prompt-pure: `source ~/dotfiles/load_pure_prompt.sh` or `lpp`
+3. Install prompt-pure: `brew install pure` (TODO: script for brew packages)
 
 4. Install powerline fonts: `./fonts/install.sh`
 
