@@ -6,8 +6,8 @@
   brv = branch -vv
   lola = log --decorate --oneline --graph --abbrev-commit --all
   lol = log --decorate --oneline --graph --abbrev-commit
-  lolan = log --decorate --oneline --graph --abbrev-commit --all -n
-  loln = log --decorate --oneline --graph --abbrev-commit -n
+  lolan =  !git --no-pager log --decorate --oneline --graph --abbrev-commit --all -n
+  loln =  !git --no-pager log --decorate --oneline --graph --abbrev-commit -n
   com = commit -m
   coamend = commit --amend
   coma = commit --amend -m
@@ -40,3 +40,6 @@
     date = local
 [core]
 	excludesfile = /Users/colinvl/.gitignore_global
+[pager]
+	branch = false
+	stash = false

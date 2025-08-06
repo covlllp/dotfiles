@@ -1,18 +1,10 @@
+# Sierra
+export SIERRA_ROOT="/Users/colin@sierra.ai/sierra"
+source $SIERRA_ROOT/.shell/shellenv
 
-# Watershed
-export WS_USER=colin
+export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)"/rootCA.pem
+export GOTOOLCHAIN=auto
+GOPATH="$(go env GOPATH)"
+PATH="$GOPATH/bin:$PATH"
 
-# postgresql
-export PATH="$(brew --prefix postgresql@11)/bin:$PATH"
-
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv init --path)"
-
-# nodenv
-eval "$(nodenv init -)"
-
-# ghg script completions
-source '/Users/colin/ghg/scripts/completions.sh'
+export AWS_PROFILE="devtools-engineer"
