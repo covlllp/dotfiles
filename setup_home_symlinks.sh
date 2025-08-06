@@ -7,6 +7,7 @@ rm ~/.vimrc
 rm ~/.zshrc
 rm ~/.tmux.conf
 rm -rf ~/.vim
+rm -rf ~/.vscode
 rm ~/.config/termite/config
 rm ~/.prettierrc.json
 
@@ -20,5 +21,9 @@ ln -s ~/dotfiles/vim ~/.vim
 ln -s ~/dotfiles/termite_config ~/.config/termite/config
 ln -s ~/dotfiles/prettierrc.json ~/.prettierrc.json
 
-# Setup pure prompt
-source ~/dotfiles/load_pure_prompt.sh
+# Try to setup symbolic link for neovim
+ln -s ~/dotfiles/vimrc ~/.config/nvim/init.vim
+
+# Try to setup symbolic link for vscode settings
+mkdir -p ~/.vscode
+ln -s ~/dotfiles/settings.json ~/.vscode/settings.json

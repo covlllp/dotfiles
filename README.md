@@ -12,13 +12,17 @@ You might need to install git, node, neofetch, and curl
 
 2. Load submodules with `git submodule init && git submodule update`
 
-3. Install prompt-pure: `brew install pure` (TODO: script for brew packages)
+3. Install brew: https://brew.sh/
+
+4. Install brew packages: `source ~/dotfiles/install_brew_packages.sh`
 
 4. Install powerline fonts: `./fonts/install.sh`
 
 5. Setup symlinks to dotfiles `source ~/dotfiles/setup_home_symlinks.sh`
 
 6. Change shell to zsh `chsh -s /bin/zsh`
+
+7. [Optional] Install vim-plug for neovim: https://github.com/junegunn/vim-plug
 
 7. Install vim plugins with `:PlugInstall`
 
