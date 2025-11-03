@@ -11,6 +11,7 @@
   com = commit -m
   coamend = commit --amend
   coma = commit --amend -m
+  comnv = commit --no-verify -m
   adu = add -u
   ada = add -A
   aducom = !git add -u && git commit -m
@@ -21,9 +22,11 @@
   aducoamend = !git add -u && git commit --amend
   rem = remote
   remv = remote -v
-  save = !git add -A && git commit -m "savepoint"
-  freb = !git fetch && git rebase origin/master
+  save = !git add -A && git commit --no-verify -m "savepoint"
+  freb = !git fetch && git rebase origin/main
   squash = rebase -i
+  forked-push = push --force-with-lease
+  gone = !git fetch -p && git for-each-ref --format='%(refname:short) %(upstream:track)' refs/heads | awk '$2 ~ /gone/{print $1}' | xargs -n1 git branch -D || true
 [user]
 	name = Colin VanLang
 	email = colinvanlang@gmail.com

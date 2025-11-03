@@ -143,7 +143,9 @@ set showmatch
 set mat=2      " How many tenths of a second to blink when matching
 
 " Make pasting better
-set pastetoggle=<leader>q
+if !has('nvim')
+  set pastetoggle=<leader>q
+endif
 
 " Line wrapping, but dont' insert newlines
 set wrap
@@ -165,8 +167,10 @@ syntax enable
 " Set colorscheme to oceanic
 set t_Co=256
 let g:oceanic_next_terminal_bold = 1
-colorscheme OceanicNext
-set term=screen-256color
+if !has('nvim')
+  colorscheme OceanicNext
+  set term=screen-256color
+endif
 
 
 " --- Plugin Settings --- "
@@ -274,7 +278,9 @@ inoremap <silent><expr> <c-@> coc#refresh()
 nnoremap ; :
 
 " esc to jj
-imap jj <Esc>
+if !has('nvim')
+  imap jj <Esc>
+endif
 
 " navigate by display instead of line
 noremap k gk

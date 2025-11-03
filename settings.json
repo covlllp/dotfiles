@@ -1,3 +1,4 @@
 {
-    "vscode-neovim.neovimExecutablePaths.mac": "/opt/homebrew/bin/nvim"
+    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+    "editor.rulers": [80, 120]
 }
