@@ -4,12 +4,6 @@
     "command": "composerMode.agent"
   },
   {
-    "key": "j j",
-    "command": "vscode-neovim.escape",
-    "when": "editorTextFocus && neovim.mode == insert",
-    "args": "jj"
-  },
-  {
     "key": "shift+cmd+u",
     "command": "composerMode.plan"
   },
