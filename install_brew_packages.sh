@@ -10,6 +10,7 @@ packages=(
   the_silver_searcher
   vim
   neovim
+  lazygit
 )
 
 echo "📦 Starting Homebrew installations..."
