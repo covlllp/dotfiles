@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  echo "Usage: wts <branch> [interval_seconds]"
+  echo "Example: wts dev"
+  echo "         wts dev2 1"
+}
+
+if [[ $# -lt 1 || $# -gt 2 ]]; then
+  usage
+  exit 1
+fi
+
+TARGET="$1"
+INTERVAL="${2:-1}"
+
+# Must be inside a git repo/worktree
+git rev-parse --git-dir >/dev/null 2>&1 || { echo "Error: not in a git repository"; exit 1; }
+
+# Target branch must exist locally (shared across worktrees)
+git show-ref --verify --quiet "refs/heads/$TARGET" || {
+  echo "Error: local branch '$TARGET' not found"
+  exit 1
+}
+
+# Refuse if this worktree itself has the target branch checked out
+current_branch="$(git symbolic-ref -q --short HEAD || true)"
+if [[ "$current_branch" == "$TARGET" ]]; then
+  echo "Error: this worktree is currently on '$TARGET'."
+  echo "Run wts from the server/mirror worktree, not the dev worktree."
+  exit 1
+fi
+
+# Detach HEAD (so we don't move any named branch)
+git switch -q --detach
+
+echo "Detached HEAD in this worktree."
+echo "Watching local branch '$TARGET' every ${INTERVAL}s (Ctrl-C to stop)."
+
+last="$(git rev-parse "$TARGET")"
+
+sync() {
+  git reset --hard "$TARGET" >/dev/null
+  git clean -fd >/dev/null
+
+  # Trigger Air (watches go.mod)
+  touch go.mod 2>/dev/null || true
+
+  # Trigger Vite (watches vite.config.ts)
+  touch web/vite.config.ts 2>/dev/null || true
+}
+
+echo "Initial sync -> ${last:0:8}"
+sync
+
+while true; do
+  now="$(git rev-parse "$TARGET")"
+  if [[ "$now" != "$last" ]]; then
+    echo "[$(date '+%H:%M:%S')] ${last:0:8} -> ${now:0:8}  syncing..."
+    sync
+    last="$now"
+    echo "[$(date '+%H:%M:%S')] done"
+  fi
+  sleep "$INTERVAL"
+done
